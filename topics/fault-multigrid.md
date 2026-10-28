@@ -296,6 +296,7 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 ## Entries
 
+- 2026-10-28 · [Which fault-mesh construction is used in practice: the placed ladder with a hand-built split chain; adapt-and-cut is the automated route the hierarchy was measured on](../entries/2026-10-28-which-fault-mesh-construction-is-used-in-practice.md) · finding
 - 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](../entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement
 - 2026-10-28 · [Coarse solve on the rotated path: handle the null space, leave the coarse level to PETSc's defaults; MUMPS is not the default](../entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md) · decision
 - 2026-10-15 · [Fault multigrid: the Moresi-Solomatov convection campaign, the fault sequence, the solver item and the hand-over](../entries/2026-10-15-fault-multigrid-the-moresi-solomatov-convection-campaign-the.md) · finding
