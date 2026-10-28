@@ -49,6 +49,7 @@ project:
         - file: entries.md
         - title: "2026-10"
           children:
+            - file: entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md
             - file: entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md
             - file: entries/2026-10-18-viscoelastic-stretch-at-large-steps-corrections-from-the.md
             - file: entries/2026-10-18-box-fault-walk-scaling-with-the-wallace-number-and-the-clamping.md

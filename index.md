@@ -14,10 +14,10 @@ page says what currently stands, and the weekly digest says what moved.
 
 **Topics**
 
-- [Fault multigrid](topics/fault-multigrid.md) · 18 live
+- [Fault multigrid](topics/fault-multigrid.md) · 19 live
 - [Particle-to-field projection](topics/particle-to-field-projection.md) · 5 live
 - [Shear-band length scales](topics/shear-band-length-scales.md) · 25 live
-- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 16 live
+- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 17 live
 - [Transport histories](topics/transport-histories.md) · 5 live
 - [Constitutive models](topics/viscoelastic-constitutive-models.md) · 8 live
 - [Viscoelastic stretch at large steps](topics/viscoelastic-stretch-at-large-steps.md) · 6 live
@@ -41,6 +41,7 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement
 - 2026-10-28 · [Coarse solve on the rotated path: handle the null space, leave the coarse level to PETSc's defaults; MUMPS is not the default](entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md) · decision
 - 2026-10-18 · [Viscoelastic stretch at large steps: corrections from the adversarial review (Pakdel-McKinley inside the layer, time-scheme cost, tangent at 1/120, SPD scope, conformation-check scope, the refusals, merge order after #800)](entries/2026-10-18-viscoelastic-stretch-at-large-steps-corrections-from-the.md) · measurement
 - 2026-10-18 · [Box fault: walk scaling with the Wallace number and the clamping-phase result](entries/2026-10-18-box-fault-walk-scaling-with-the-wallace-number-and-the-clamping.md) · measurement
@@ -60,6 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-17 · [Box fault cyclic loading: set-up figure, problem statement, implementation status](entries/2026-10-17-box-fault-cyclic-loading-set-up-figure-problem-statement.md) · finding
 - 2026-10-16 · [Viscoelastic stretch at large steps: the Jacobian spectrum at the wall, preconditioning and smoothers, the lagged-stretch dead end, "linear" at Courant 8 and 16, per-step switching, the accuracy accounting; linked from Home, the cylinder campaign, solvers and constitutive models](entries/2026-10-16-viscoelastic-stretch-at-large-steps-the-jacobian-spectrum-at.md) · dead-end
 - 2026-10-16 · [Tidal faulted shell: site sweep, strength balance, the walking and its Maxwell-time scaling, slip profiles, the first far-field result](entries/2026-10-16-tidal-faulted-shell-site-sweep-strength-balance-the-walking-and.md) · measurement
-- 2026-10-16 · [Tidal faulted shell: implementation and results (benchmarks, Coulomb maps, the Berne analogue, friction sweep)](entries/2026-10-16-tidal-faulted-shell-implementation-and-results-benchmarks.md) · measurement
 
 [All entries](entries.md)

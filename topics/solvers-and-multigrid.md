@@ -96,6 +96,7 @@ one SNES solve, $\alpha$ set per iteration, monotone except for a back-off when 
 
 ## Entries
 
+- 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](../entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement
 - 2026-10-28 · [Coarse solve on the rotated path: handle the null space, leave the coarse level to PETSc's defaults; MUMPS is not the default](../entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md) · decision
 - 2026-10-16 · [Dead end: Preconditioning an indefinite viscoelastic velocity block](../entries/2026-10-16-dead-end-preconditioning-an-indefinite-viscoelastic.md) · dead-end
 - 2026-10-05 · [Working notes: topic pages (constitutive models, transport histories, projection, solvers, benchmarks), the cylinder campaign, how we plan](../entries/2026-10-05-working-notes-topic-pages-constitutive-models-transport.md) · finding
