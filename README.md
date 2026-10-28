@@ -20,6 +20,30 @@ a version is in `underworld3/docs/`.
 3. **A topic page's conclusion is rewritten only with an entry underneath it** saying
    why. The entry list on a topic page is generated; the paragraph above it is yours.
 
+## Closing a question
+
+A comparison that ends with a good answer is not closed when the answer is written
+down. It is closed when the preference reaches the places the next session reads
+without looking for it. The fault-mesh construction is the example that set this rule
+(entry `2026-10-28-which-fault-mesh-construction-is-used-in-practice`): the ladder
+was ruled the hierarchy on 14 October, the ruling sat in one wiki section, the library
+automated the other route, the figure scripts and the note followed the library, and
+two weeks later the preference had to be re-derived.
+
+So a `decision` entry carries three lines, and the entry is not sealed without them:
+
+- **Preferred**: the route we use, in one sentence.
+- **Allowed**: the kept alternative, and the one case in which it is the right choice.
+- **Where enforced**: the places the preference now lives, each named: the capability
+  guide's rulings section, the docstring of the alternative (which says it is the
+  alternative and names the preferred route), the default or the convenient call
+  (the preferred route must be the easier one to use, or it will lose), the example
+  or fixture new work copies from.
+
+A preference that exists only in the entry is a wish. The docs hub's monthly pass
+reads every live `decision` entry and checks that each "where enforced" item exists;
+one that does not is a docs issue, not a reminder.
+
 ## Writing an entry
 
 Copy `templates/entry.md` to `entries/YYYY-MM-DD-<slug>.md`, fill in the front matter

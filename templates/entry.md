@@ -38,3 +38,11 @@ The conclusion, and what it rests on. Say what is claimed and what is not.
 One of: kept, and the topic page or guide it feeds; discarded, and why; inconclusive,
 and the issue that names the next run. Appended at the end of the discussion, before
 the entry is merged; after that the entry does not change.
+
+A `decision` entry closes a question only with these three lines (see README,
+"Closing a question"):
+
+- **Preferred**: the route we use.
+- **Allowed**: the kept alternative, and the one case where it is right.
+- **Where enforced**: the guide's rulings section, the alternative's docstring, the
+  default or convenient call, the example new work copies from; each named.
