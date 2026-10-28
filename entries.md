@@ -7,6 +7,8 @@ status says whether it still stands. The topic pages hold the current reading.
 
 ## 2026-10
 
+- 2026-10-29 · [A per-level wall rotation cuts a rotated free-slip custom-FMG solve on an adapted annulus from 18 serial and 197 parallel velocity iterations to 3 and 4](entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md) · measurement · fault-multigrid, solvers-and-multigrid
+- 2026-10-29 · [A datum-only cold start on the rotated path sets its convergence reference from the lifted iterate and takes one increment more than it needs](entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md) · finding · solvers-and-multigrid
 - 2026-10-28 · [Which fault-mesh construction is used in practice: the placed ladder with a hand-built split chain; adapt-and-cut is the automated route the hierarchy was measured on](entries/2026-10-28-which-fault-mesh-construction-is-used-in-practice.md) · finding · fault-multigrid
 - 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement · fault-multigrid, solvers-and-multigrid
 - 2026-10-28 · [Coarse solve on the rotated path: handle the null space, leave the coarse level to PETSc's defaults; MUMPS is not the default](entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md) · decision · solvers-and-multigrid, fault-multigrid

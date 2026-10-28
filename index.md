@@ -14,10 +14,10 @@ page says what currently stands, and the weekly digest says what moved.
 
 **Topics**
 
-- [Fault multigrid](topics/fault-multigrid.md) · 20 live
+- [Fault multigrid](topics/fault-multigrid.md) · 21 live
 - [Particle-to-field projection](topics/particle-to-field-projection.md) · 5 live
 - [Shear-band length scales](topics/shear-band-length-scales.md) · 25 live
-- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 17 live
+- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 19 live
 - [Transport histories](topics/transport-histories.md) · 5 live
 - [Constitutive models](topics/viscoelastic-constitutive-models.md) · 8 live
 - [Viscoelastic stretch at large steps](topics/viscoelastic-stretch-at-large-steps.md) · 6 live
@@ -41,6 +41,8 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-10-29 · [A per-level wall rotation cuts a rotated free-slip custom-FMG solve on an adapted annulus from 18 serial and 197 parallel velocity iterations to 3 and 4](entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md) · measurement
+- 2026-10-29 · [A datum-only cold start on the rotated path sets its convergence reference from the lifted iterate and takes one increment more than it needs](entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md) · finding
 - 2026-10-28 · [Which fault-mesh construction is used in practice: the placed ladder with a hand-built split chain; adapt-and-cut is the automated route the hierarchy was measured on](entries/2026-10-28-which-fault-mesh-construction-is-used-in-practice.md) · finding
 - 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement
 - 2026-10-28 · [Coarse solve on the rotated path: handle the null space, leave the coarse level to PETSc's defaults; MUMPS is not the default](entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md) · decision
@@ -59,7 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-17 · [Box fault: implementation as built (gmsh patch + registered coarse tail, sign, cost)](entries/2026-10-17-box-fault-implementation-as-built-gmsh-patch-registered-coarse.md) · measurement
 - 2026-10-17 · [Box fault: first results - the x-parallel null and the oblique walk](entries/2026-10-17-box-fault-first-results-the-x-parallel-null-and-the-oblique-walk.md) · finding
 - 2026-10-17 · [Box fault: ETD expression-viscosity bug, stress-history flavour, cost](entries/2026-10-17-box-fault-etd-expression-viscosity-bug-stress-history-flavour.md) · measurement
-- 2026-10-17 · [Box fault cyclic loading: set-up figure, problem statement, implementation status](entries/2026-10-17-box-fault-cyclic-loading-set-up-figure-problem-statement.md) · finding
-- 2026-10-16 · [Viscoelastic stretch at large steps: the Jacobian spectrum at the wall, preconditioning and smoothers, the lagged-stretch dead end, "linear" at Courant 8 and 16, per-step switching, the accuracy accounting; linked from Home, the cylinder campaign, solvers and constitutive models](entries/2026-10-16-viscoelastic-stretch-at-large-steps-the-jacobian-spectrum-at.md) · dead-end
 
 [All entries](entries.md)
