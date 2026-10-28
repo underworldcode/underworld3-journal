@@ -7,7 +7,7 @@ project:
     The lab journal of the Underworld geodynamics project: dated, immutable entries
     (findings, dead ends, measurements, decisions), topic pages that index them, and
     the weekly digest.
-  github: https://github.com/underworldcode/journal
+  github: https://github.com/underworldcode/underworld3-journal
   license:
     content: CC-BY-4.0
     code: MIT
@@ -164,4 +164,4 @@ site:
       url: https://github.com/underworldcode/underworld3
   actions:
     - title: Write an entry
-      url: https://github.com/underworldcode/journal/blob/main/README.md
+      url: https://github.com/underworldcode/underworld3-journal/blob/main/README.md

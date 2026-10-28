@@ -6,7 +6,7 @@ we now think, one dated entry at a time. It is the home for knowledge in the
 and it replaces the wiki. The reasoning is in
 [`INFORMATION-FLOW-PROPOSAL.md`](https://github.com/lmoresi/uw3-campaigns/blob/main/INFORMATION-FLOW-PROPOSAL.md).
 
-Site: <https://underworldcode.github.io/journal/>. Technical notes, the citable
+Site: <https://underworldcode.github.io/underworld3-journal/>. Technical notes, the citable
 series, are at <https://www.underworldcode.org/>; the documentation of the code at
 a version is in `underworld3/docs/`.
 

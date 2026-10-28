@@ -1,7 +1,7 @@
 # Underworld3 working notes: moved to the journal
 
 These pages moved to the **Underworld journal** on 2026-10-27:
-<https://github.com/underworldcode/journal> (site: <https://underworldcode.github.io/journal/>).
+<https://github.com/underworldcode/underworld3-journal> (site: <https://underworldcode.github.io/underworld3-journal/>).
 
 Every page here became a topic, benchmark or campaign page there with its text as the
 starting point; every commit to this wiki became a dated entry; every bullet under

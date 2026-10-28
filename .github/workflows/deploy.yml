@@ -35,7 +35,7 @@ jobs:
       - run: git diff --exit-code -- index.md entries.md digests.md myst.yml topics benchmarks campaigns
       - run: myst build --html
         env:
-          BASE_URL: /journal
+          BASE_URL: /underworld3-journal
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html
