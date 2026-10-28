@@ -7,6 +7,7 @@ status says whether it still stands. The topic pages hold the current reading.
 
 ## 2026-10
 
+- 2026-10-28 · [Coarse solve on the rotated path: handle the null space, leave the coarse level to PETSc's defaults; MUMPS is not the default](entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md) · decision · solvers-and-multigrid, fault-multigrid
 - 2026-10-18 · [Viscoelastic stretch at large steps: corrections from the adversarial review (Pakdel-McKinley inside the layer, time-scheme cost, tangent at 1/120, SPD scope, conformation-check scope, the refusals, merge order after #800)](entries/2026-10-18-viscoelastic-stretch-at-large-steps-corrections-from-the.md) · measurement · viscoelastic-stretch-at-large-steps
 - 2026-10-18 · [Box fault: walk scaling with the Wallace number and the clamping-phase result](entries/2026-10-18-box-fault-walk-scaling-with-the-wallace-number-and-the-clamping.md) · measurement · box-fault-cyclic-loading
 - 2026-10-18 · [Box fault: orientation series (30, 45, 60 degrees) against the in-phase clamping](entries/2026-10-18-box-fault-orientation-series-30-45-60-degrees-against-the-in.md) · finding · box-fault-cyclic-loading
