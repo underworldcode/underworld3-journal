@@ -1,0 +1,109 @@
+---
+title: All entries
+---
+
+Every entry, newest first. An entry is written once and never edited; its
+status says whether it still stands. The topic pages hold the current reading.
+
+## 2026-10
+
+- 2026-10-18 · [Viscoelastic stretch at large steps: corrections from the adversarial review (Pakdel-McKinley inside the layer, time-scheme cost, tangent at 1/120, SPD scope, conformation-check scope, the refusals, merge order after #800)](entries/2026-10-18-viscoelastic-stretch-at-large-steps-corrections-from-the.md) · measurement · viscoelastic-stretch-at-large-steps
+- 2026-10-18 · [Box fault: walk scaling with the Wallace number and the clamping-phase result](entries/2026-10-18-box-fault-walk-scaling-with-the-wallace-number-and-the-clamping.md) · measurement · box-fault-cyclic-loading
+- 2026-10-18 · [Box fault: orientation series (30, 45, 60 degrees) against the in-phase clamping](entries/2026-10-18-box-fault-orientation-series-30-45-60-degrees-against-the-in.md) · finding · box-fault-cyclic-loading
+- 2026-10-18 · [Box fault: De 0.3 steady walk](entries/2026-10-18-box-fault-de-0-3-steady-walk.md) · finding · box-fault-cyclic-loading
+- 2026-10-18 · [Box fault: 60 degree walk is left-lateral (slip sense corrected)](entries/2026-10-18-box-fault-60-degree-walk-is-left-lateral-slip-sense-corrected.md) · finding · box-fault-cyclic-loading
+- 2026-10-17 · [Viscoelastic stretch at large steps: the wall layer measured (extension at the stagnation point, tension on the shoulders, unresolved), FENE-P capped at the same place and step, the consequences for yielding](entries/2026-10-17-viscoelastic-stretch-at-large-steps-the-wall-layer-measured.md) · measurement · viscoelastic-stretch-at-large-steps
+- 2026-10-17 · [Tidal faulted shell: mesh figure and resolution notes](entries/2026-10-17-tidal-faulted-shell-mesh-figure-and-resolution-notes.md) · measurement · tidal-faulted-shell
+- 2026-10-17 · [Box fault: the parallel multigrid defect and its fix](entries/2026-10-17-box-fault-the-parallel-multigrid-defect-and-its-fix.md) · finding · box-fault-cyclic-loading
+- 2026-10-17 · [Box fault: side walls traction-free, blind fault under a damage band](entries/2026-10-17-box-fault-side-walls-traction-free-blind-fault-under-a-damage.md) · finding · box-fault-cyclic-loading
+- 2026-10-17 · [Box fault: post-fix step cost; first run in progress](entries/2026-10-17-box-fault-post-fix-step-cost-first-run-in-progress.md) · measurement · box-fault-cyclic-loading
+- 2026-10-17 · [Box fault: multigrid iteration counts after the fix](entries/2026-10-17-box-fault-multigrid-iteration-counts-after-the-fix.md) · measurement · box-fault-cyclic-loading
+- 2026-10-17 · [Box fault: implementation status (mesher, damage band, ported fixes)](entries/2026-10-17-box-fault-implementation-status-mesher-damage-band-ported-fixes.md) · finding · box-fault-cyclic-loading
+- 2026-10-17 · [Box fault: implementation as built (gmsh patch + registered coarse tail, sign, cost)](entries/2026-10-17-box-fault-implementation-as-built-gmsh-patch-registered-coarse.md) · measurement · box-fault-cyclic-loading
+- 2026-10-17 · [Box fault: first results - the x-parallel null and the oblique walk](entries/2026-10-17-box-fault-first-results-the-x-parallel-null-and-the-oblique-walk.md) · finding · box-fault-cyclic-loading
+- 2026-10-17 · [Box fault: ETD expression-viscosity bug, stress-history flavour, cost](entries/2026-10-17-box-fault-etd-expression-viscosity-bug-stress-history-flavour.md) · measurement · box-fault-cyclic-loading
+- 2026-10-17 · [Box fault cyclic loading: set-up figure, problem statement, implementation status](entries/2026-10-17-box-fault-cyclic-loading-set-up-figure-problem-statement.md) · finding · box-fault-cyclic-loading
+- 2026-10-16 · [Viscoelastic stretch at large steps: the Jacobian spectrum at the wall, preconditioning and smoothers, the lagged-stretch dead end, "linear" at Courant 8 and 16, per-step switching, the accuracy accounting; linked from Home, the cylinder campaign, solvers and constitutive models](entries/2026-10-16-viscoelastic-stretch-at-large-steps-the-jacobian-spectrum-at.md) · dead-end · viscoelastic-stretch-at-large-steps
+- 2026-10-16 · [Tidal faulted shell: site sweep, strength balance, the walking and its Maxwell-time scaling, slip profiles, the first far-field result](entries/2026-10-16-tidal-faulted-shell-site-sweep-strength-balance-the-walking-and.md) · measurement · tidal-faulted-shell
+- 2026-10-16 · [Tidal faulted shell: implementation and results (benchmarks, Coulomb maps, the Berne analogue, friction sweep)](entries/2026-10-16-tidal-faulted-shell-implementation-and-results-benchmarks.md) · measurement · tidal-faulted-shell
+- 2026-10-16 · [Tidal faulted shell: far-field strain per orbit](entries/2026-10-16-tidal-faulted-shell-far-field-strain-per-orbit.md) · finding · tidal-faulted-shell
+- 2026-10-16 · [Tidal faulted shell: De 10 far field, corrected stripe net slip, the strain measure hedged](entries/2026-10-16-tidal-faulted-shell-de-10-far-field-corrected-stripe-net-slip.md) · finding · tidal-faulted-shell
+- 2026-10-16 · [Dead end: The lagged stretch ("split")](entries/2026-10-16-dead-end-the-lagged-stretch-split.md) · dead-end · viscoelastic-stretch-at-large-steps
+- 2026-10-16 · [Dead end: Preconditioning](entries/2026-10-16-dead-end-preconditioning.md) · dead-end · viscoelastic-stretch-at-large-steps
+- 2026-10-16 · [Dead end: Preconditioning an indefinite viscoelastic velocity block](entries/2026-10-16-dead-end-preconditioning-an-indefinite-viscoelastic.md) · dead-end · solvers-and-multigrid
+- 2026-10-16 · [Dead end: A between-step warning](entries/2026-10-16-dead-end-a-between-step-warning.md) · dead-end · viscoelastic-stretch-at-large-steps
+- 2026-10-15 · [Tidal faulted shell: the formulation, the Maxwell sweep, four tiger stripes against the unfaulted shell, polar views, solver findings](entries/2026-10-15-tidal-faulted-shell-the-formulation-the-maxwell-sweep-four.md) · measurement · tidal-faulted-shell
+- 2026-10-15 · [Fault multigrid: the Moresi-Solomatov convection campaign, the fault sequence, the solver item and the hand-over](entries/2026-10-15-fault-multigrid-the-moresi-solomatov-convection-campaign-the.md) · finding · fault-multigrid
+- 2026-10-14 · [Fault multigrid: the rulings up front; the ladder as the one hierarchy (split or TI); the parallel imbalance decomposed (base balanced, child inherits, star gathers)](entries/2026-10-14-fault-multigrid-the-rulings-up-front-the-ladder-as-the-one.md) · decision · fault-multigrid
+- 2026-10-14 · [Fault multigrid: the finest ladder is the constraint; how far the welded base carries it, and what each realisation needs under it](entries/2026-10-14-fault-multigrid-the-finest-ladder-is-the-constraint-how-far-the.md) · finding · fault-multigrid
+- 2026-10-14 · [Fault multigrid: the convection campaign toward a fault that matters (in progress); the inode rule](entries/2026-10-14-fault-multigrid-the-convection-campaign-toward-a-fault-that.md) · decision · fault-multigrid
+- 2026-10-14 · [Fault multigrid: the annulus example (Zhong & Gurnis analogue), the outcropping ladder, the coarse-level wall rotation, meshing against solve](entries/2026-10-14-fault-multigrid-the-annulus-example-zhong-gurnis-analogue-the.md) · finding · fault-multigrid
+- 2026-10-14 · [Fault multigrid: the add-on formulation, where balance lives](entries/2026-10-14-fault-multigrid-the-add-on-formulation-where-balance-lives.md) · finding · fault-multigrid
+- 2026-10-14 · [Dead end: TI bands on coarse levels under a split finest (B1, B2)](entries/2026-10-14-dead-end-ti-bands-on-coarse-levels-under-a-split-finest.md) · dead-end · fault-multigrid
+- 2026-10-14 · [Dead end: Rebalancing the base after adapt](entries/2026-10-14-dead-end-rebalancing-the-base-after-adapt.md) · dead-end · fault-multigrid
+- 2026-10-13 · [Shear-band length scales: independent gmsh meshes as multigrid levels in 3-D; the unregularised capped-Krylov contrast; snapping, GAMG and timing in What did not work](entries/2026-10-13-shear-band-length-scales-independent-gmsh-meshes-as-multigrid.md) · dead-end · shear-band-length-scales
+- 2026-10-13 · [Fault multigrid: the two embeddings (cut and ladder), the larger-case scaling and where the imbalance comes from](entries/2026-10-13-fault-multigrid-the-two-embeddings-cut-and-ladder-the-larger.md) · measurement · fault-multigrid
+- 2026-10-13 · [Fault multigrid: the ladder measured (split, welded and no mid; TI); orphan injection retired](entries/2026-10-13-fault-multigrid-the-ladder-measured-split-welded-and-no-mid-ti.md) · dead-end · fault-multigrid
+- 2026-10-13 · [Fault multigrid: the hierarchies, the split-level design, FMG behaviour and the parallel load](entries/2026-10-13-fault-multigrid-the-hierarchies-the-split-level-design-fmg.md) · finding · fault-multigrid
+- 2026-10-13 · [Fault multigrid: the base is never rebalanced; partition the add-on child; one ladder hierarchy for split and TI](entries/2026-10-13-fault-multigrid-the-base-is-never-rebalanced-partition-the-add.md) · finding · fault-multigrid
+- 2026-10-13 · [Dead end: The sheet placement on a bisection-refined 3-D child](entries/2026-10-13-dead-end-the-sheet-placement-on-a-bisection-refined-3-d.md) · dead-end · fault-multigrid
+- 2026-10-13 · [Dead end: The migration star forest for the pairing](entries/2026-10-13-dead-end-the-migration-star-forest-for-the-pairing.md) · dead-end · fault-multigrid
+- 2026-10-13 · [Dead end: Snapping refined vertices onto the fillets in 3-D](entries/2026-10-13-dead-end-snapping-refined-vertices-onto-the-fillets-in-3.md) · dead-end · shear-band-length-scales
+- 2026-10-13 · [Dead end: Node-cloud transfers to a split coarse level](entries/2026-10-13-dead-end-node-cloud-transfers-to-a-split-coarse-level.md) · dead-end · fault-multigrid
+- 2026-10-13 · [Dead end: Nearest-node injection for orphan columns](entries/2026-10-13-dead-end-nearest-node-injection-for-orphan-columns.md) · dead-end · fault-multigrid
+- 2026-10-13 · [Dead end: GAMG as the coarse-level solve](entries/2026-10-13-dead-end-gamg-as-the-coarse-level-solve.md) · dead-end · shear-band-length-scales
+- 2026-10-13 · [Dead end: Extrapolated weights](entries/2026-10-13-dead-end-extrapolated-weights.md) · dead-end · fault-multigrid
+- 2026-10-13 · [Dead end: Comparing wall times from separate runs on a shared machine](entries/2026-10-13-dead-end-comparing-wall-times-from-separate-runs-on-a.md) · dead-end · shear-band-length-scales
+- 2026-10-12 · [Shear-band length scales: stiffer beta, strength shift, inexact Newton, 3-D extruded notch](entries/2026-10-12-shear-band-length-scales-stiffer-beta-strength-shift-inexact.md) · finding · shear-band-length-scales
+- 2026-10-12 · [Shear band length scales: 3-D coarse-level solve and capped Krylov tolerance](entries/2026-10-12-shear-band-length-scales-3-d-coarse-level-solve-and-capped.md) · finding · shear-band-length-scales
+- 2026-10-11 · [Shear-band length scales: micromorphic and Cosserat at equal band width](entries/2026-10-11-shear-band-length-scales-micromorphic-and-cosserat-at-equal.md) · finding · shear-band-length-scales
+- 2026-10-11 · [Shear-band length scales: H chi is a bound on the weakening, not the shift](entries/2026-10-11-shear-band-length-scales-h-chi-is-a-bound-on-the-weakening-not.md) · finding · shear-band-length-scales
+- 2026-10-11 · [Shear-band length scales: corrected seeded micromorphic Newton counts; band trace offset](entries/2026-10-11-shear-band-length-scales-corrected-seeded-micromorphic-newton.md) · measurement · shear-band-length-scales
+- 2026-10-10 · [Shear-band length scales: refinement 5, mesh-independent](entries/2026-10-10-shear-band-length-scales-refinement-5-mesh-independent.md) · finding · shear-band-length-scales
+- 2026-10-10 · [Shear-band length scales: figures for refinements 1-5](entries/2026-10-10-shear-band-length-scales-figures-for-refinements-1-5.md) · finding · shear-band-length-scales
+- 2026-10-09 · [Shear-band length scales: the W(l) plateau is partly the estimator's background](entries/2026-10-09-shear-band-length-scales-the-w-l-plateau-is-partly-the.md) · finding · shear-band-length-scales
+- 2026-10-09 · [Shear-band length scales: the beta-xi map, and refinement 4 at l = 0.5 km](entries/2026-10-09-shear-band-length-scales-the-beta-xi-map-and-refinement-4-at-l.md) · finding · shear-band-length-scales
+- 2026-10-09 · [Shear-band length scales: refinement 4, integral width, xi sets intensity not width, Cosserat comparison corrected](entries/2026-10-09-shear-band-length-scales-refinement-4-integral-width-xi-sets.md) · finding · shear-band-length-scales
+- 2026-10-09 · [Shear-band length scales: re-planned around the formulations and examples](entries/2026-10-09-shear-band-length-scales-re-planned-around-the-formulations-and.md) · finding · shear-band-length-scales
+- 2026-10-09 · [Shear-band length scales: multigrid cost against refinement](entries/2026-10-09-shear-band-length-scales-multigrid-cost-against-refinement.md) · measurement · shear-band-length-scales
+- 2026-10-09 · [Shear-band length scales: micromorphic and Cosserat continua on the notch (new topic page)](entries/2026-10-09-shear-band-length-scales-micromorphic-and-cosserat-continua-on.md) · finding · shear-band-length-scales
+- 2026-10-09 · [Shear-band length scales: \mathrm instead of \operatorname (not allowed by the renderer)](entries/2026-10-09-shear-band-length-scales-mathrm-instead-of-operatorname-not.md) · finding · shear-band-length-scales
+- 2026-10-09 · [Shear-band length scales: Cosserat through refinement 5; corrected comparison](entries/2026-10-09-shear-band-length-scales-cosserat-through-refinement-5.md) · finding · shear-band-length-scales
+- 2026-10-09 · [Dead end: Very small $\ell$ under FMG](entries/2026-10-09-dead-end-very-small-ell-under-fmg.md) · dead-end · shear-band-length-scales
+- 2026-10-09 · [Dead end: Too weak a coupling](entries/2026-10-09-dead-end-too-weak-a-coupling.md) · dead-end · shear-band-length-scales
+- 2026-10-09 · [Dead end: Rate strengthening alone](entries/2026-10-09-dead-end-rate-strengthening-alone.md) · dead-end · shear-band-length-scales
+- 2026-10-09 · [Dead end: Gradient damage acting on the cohesion](entries/2026-10-09-dead-end-gradient-damage-acting-on-the-cohesion.md) · dead-end · shear-band-length-scales
+- 2026-10-09 · [Dead end: An independent smoothed strain rate inside the viscosity](entries/2026-10-09-dead-end-an-independent-smoothed-strain-rate-inside-the.md) · dead-end · shear-band-length-scales
+- 2026-10-09 · [Dead end: A smoothed strain rate fed to the yield law as lagged data](entries/2026-10-09-dead-end-a-smoothed-strain-rate-fed-to-the-yield-law-as.md) · dead-end · shear-band-length-scales
+- 2026-10-05 · [Working notes: topic pages (constitutive models, transport histories, projection, solvers, benchmarks), the cylinder campaign, how we plan](entries/2026-10-05-working-notes-topic-pages-constitutive-models-transport.md) · finding · benchmarks, cylinder-campaign-2026, particle-to-field-projection, solvers-and-multigrid, transport-histories
+- 2026-10-05 · [Updated Constitutive models (markdown)](entries/2026-10-05-updated-constitutive-models-markdown.md) · finding · viscoelastic-constitutive-models
+- 2026-10-05 · [Spiegelman notch campaign: campaign page, solver lessons, benchmark row, figures](entries/2026-10-05-spiegelman-notch-campaign-campaign-page-solver-lessons.md) · finding · spiegelman-notch-campaign-2026
+- 2026-10-05 · [Math in fenced math blocks and $...$ inline, so markdown does not eat the backslashes (\, became a comma)](entries/2026-10-05-math-in-fenced-math-blocks-and-inline-so-markdown-does-not-eat.md) · finding · benchmarks, solvers-and-multigrid, viscoelastic-constitutive-models
+- 2026-10-05 · [Equations for each VE model and the step; figures: meshes, frames, force traces, validation, convergence](entries/2026-10-05-equations-for-each-ve-model-and-the-step-figures-meshes-frames.md) · finding · benchmarks, cylinder-campaign-2026, viscoelastic-constitutive-models
+- 2026-10-05 · [Dead end: Yielded fraction as a switch](entries/2026-10-05-dead-end-yielded-fraction-as-a-switch.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: The sparse "sign-capturing" Schur](entries/2026-10-05-dead-end-the-sparse-sign-capturing-schur.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: The per-cell fit](entries/2026-10-05-dead-end-the-per-cell-fit.md) · dead-end · particle-to-field-projection
+- 2026-10-05 · [Dead end: The particle (Lagrangian) history](entries/2026-10-05-dead-end-the-particle-lagrangian-history.md) · dead-end · transport-histories
+- 2026-10-05 · [Dead end: The nodal trace-back next to a no-slip wall](entries/2026-10-05-dead-end-the-nodal-trace-back-next-to-a-no-slip-wall.md) · dead-end · transport-histories
+- 2026-10-05 · [Dead end: The first deficit fill was a diffusion](entries/2026-10-05-dead-end-the-first-deficit-fill-was-a-diffusion.md) · dead-end · particle-to-field-projection
+- 2026-10-05 · [Dead end: The exact hard Min and Max, re-litigated](entries/2026-10-05-dead-end-the-exact-hard-min-and-max-re-litigated.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Storing log c for FENE-P](entries/2026-10-05-dead-end-storing-log-c-for-fene-p.md) · dead-end · viscoelastic-constitutive-models
+- 2026-10-05 · [Dead end: Smoother and hierarchy changes against the mechanism mode](entries/2026-10-05-dead-end-smoother-and-hierarchy-changes-against-the.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Seeding tracers on the centreline](entries/2026-10-05-dead-end-seeding-tracers-on-the-centreline.md) · dead-end · transport-histories
+- 2026-10-05 · [Dead end: Seam weights summed over local cells only](entries/2026-10-05-dead-end-seam-weights-summed-over-local-cells-only.md) · dead-end · particle-to-field-projection
+- 2026-10-05 · [Dead end: Running 16 ranks on the 12-core laptop](entries/2026-10-05-dead-end-running-16-ranks-on-the-12-core-laptop.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Rewiring the smoothing expression unconditionally](entries/2026-10-05-dead-end-rewiring-the-smoothing-expression.md) · dead-end · viscoelastic-constitutive-models
+- 2026-10-05 · [Dead end: Random-solution and random-RHS tests of the velocity multigrid](entries/2026-10-05-dead-end-random-solution-and-random-rhs-tests-of-the.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Picard-matrix or blended-matrix preconditioners for the Newton operator](entries/2026-10-05-dead-end-picard-matrix-or-blended-matrix-preconditioners.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Partition dependence](entries/2026-10-05-dead-end-partition-dependence.md) · dead-end · transport-histories
+- 2026-10-05 · [Dead end: Our first two diagnoses were wrong](entries/2026-10-05-dead-end-our-first-two-diagnoses-were-wrong.md) · dead-end · viscoelastic-constitutive-models
+- 2026-10-05 · [Dead end: Nonlinear remedies for a linear failure](entries/2026-10-05-dead-end-nonlinear-remedies-for-a-linear-failure.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Nitsche free-slip with γ = 10](entries/2026-10-05-dead-end-nitsche-free-slip-with-10.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Nested iteration (coarse solve, interpolate, fine Newton)](entries/2026-10-05-dead-end-nested-iteration-coarse-solve-interpolate-fine.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Naming the FENE-P fields by `id(self)`](entries/2026-10-05-dead-end-naming-the-fene-p-fields-by-id-self.md) · dead-end · viscoelastic-constitutive-models
+- 2026-10-05 · [Dead end: Ladders in V and in the rate-weakening cohesion homotopy](entries/2026-10-05-dead-end-ladders-in-v-and-in-the-rate-weakening-cohesion.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: Infinite extensibility](entries/2026-10-05-dead-end-infinite-extensibility.md) · dead-end · viscoelastic-constitutive-models
+- 2026-10-05 · [Dead end: A fixed-h `-snes_test_jacobian`](entries/2026-10-05-dead-end-a-fixed-h-snes-test-jacobian.md) · dead-end · solvers-and-multigrid
+- 2026-10-05 · [Dead end: A Barth–Jespersen limiter on the cell fit](entries/2026-10-05-dead-end-a-barth-jespersen-limiter-on-the-cell-fit.md) · dead-end · particle-to-field-projection
+- 2026-10-05 · [Benchmarks: one page per benchmark type — the notch gets its own page](entries/2026-10-05-benchmarks-one-page-per-benchmark-type-the-notch-gets-its-own.md) · finding · benchmarks
+- 2026-10-05 · [Benchmarks become an index by family; one page per viscoelastic benchmark with the notch page's structure; LaTeX for the formulas](entries/2026-10-05-benchmarks-become-an-index-by-family-one-page-per-viscoelastic.md) · finding · benchmarks
