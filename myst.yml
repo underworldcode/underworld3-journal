@@ -49,6 +49,7 @@ project:
         - file: entries.md
         - title: "2026-10"
           children:
+            - file: entries/2026-10-30-the-tail-ruling-is-provisional-above-a-band-ratio-of-about-8-pending-a-sweep.md
             - file: entries/2026-10-30-the-production-chain-puts-2s-on-the-finest-base-level-and-4s-one-level-down.md
             - file: entries/2026-10-30-ladder-levels-nest-along-the-spine-not-by-vertices-when-the-band-widens.md
             - file: entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md

@@ -7,6 +7,7 @@ status says whether it still stands. The topic pages hold the current reading.
 
 ## 2026-10
 
+- 2026-10-30 · [The tail ruling is provisional above a band ratio of about 8: a sweep of three hierarchies on the production ladder is commissioned before any result is published](entries/2026-10-30-the-tail-ruling-is-provisional-above-a-band-ratio-of-about-8-pending-a-sweep.md) · decision · fault-multigrid, solvers-and-multigrid
 - 2026-10-30 · [The production chain puts the 2S ladder on the base's finest level, beside the S ladder, and the 4S ladder one level down; the rig's band-ratio table is confounded with cell aspect](entries/2026-10-30-the-production-chain-puts-2s-on-the-finest-base-level-and-4s-one-level-down.md) · finding · fault-multigrid, solvers-and-multigrid
 - 2026-10-30 · [Ladder levels nest along the spine, not by vertices, when the band widens with the level as production does](entries/2026-10-30-ladder-levels-nest-along-the-spine-not-by-vertices-when-the-band-widens.md) · finding · fault-multigrid
 - 2026-10-29 · [Which multigrid tail goes under the finest ladder: the lean split chain in production; a single ladder over the welded base only on a linear rig up to a band ratio of about 12](entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md) · decision · fault-multigrid, solvers-and-multigrid
