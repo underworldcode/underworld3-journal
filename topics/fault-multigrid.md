@@ -21,10 +21,14 @@ the list at the foot:
   level (`place_fault_ribbon_2d(..., mesher="ladder", split=True)`, rung spacing $S$,
   band $2S$) and builds the split chain by hand; adapt-and-cut is the automated library
   route and the one the hierarchy strategies were compared on (entry 2026-10-28).
-- **The chain's hosts.** The $2S$ ladder is placed on the base's finest level beside the
-  $S$ ladder, and the $4S$ ladder one level down; the chain replaces the base's top two
-  levels and the hierarchy has as many levels as the welded one (entry 2026-10-30; the
-  wiki text and two earlier entries say "one and two steps below the finest", which the
+- **The chain's hosts.** Each ladder is placed into a *copy* of a base level; the base
+  and its levels are never modified (the placement reads the host's DM and returns a
+  new one). The $2S$ ladder goes into a copy of the base's finest level, as the $S$
+  ladder does, and the $4S$ ladder into a copy of the level below. The solver's level
+  list is then the base's coarser levels as they are, the two ladder-bearing copies,
+  and the finest; it has as many levels as the welded hierarchy, and the two base
+  levels whose copies carry ladders are simply not in it (entry 2026-10-30; the wiki
+  text and two earlier entries say "one and two steps below the finest", which the
   code and the guide's cell counts contradict).
 - **Why the chain.** A yielding lid caps the welded tail's velocity solve at 200
   iterations once Newton starts; the lean chain does not cap (entry 2026-10-29). The
