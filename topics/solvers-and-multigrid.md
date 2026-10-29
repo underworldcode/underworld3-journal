@@ -97,7 +97,7 @@ one SNES solve, $\alpha$ set per iteration, monotone except for a back-off when 
 ## Entries
 
 - 2026-10-29 · [A per-level wall rotation cuts a rotated free-slip custom-FMG solve on an adapted annulus from 18 serial and 197 parallel velocity iterations to 3 and 4](../entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md) · measurement
-- 2026-10-29 · [A datum-only cold start on the rotated path sets its convergence reference from the lifted iterate and takes one increment more than it needs](../entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md) · finding
+- 2026-10-29 · [Under continuation a datum-only cold start skips its Picard phase and still converges in 10 Newton iterations: not a must-fix](../entries/2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md) · measurement
 - 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](../entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement
 - 2026-10-28 · [Coarse solve on the rotated path: handle the null space, leave the coarse level to PETSc's defaults; MUMPS is not the default](../entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md) · decision
 - 2026-10-16 · [Dead end: Preconditioning an indefinite viscoelastic velocity block](../entries/2026-10-16-dead-end-preconditioning-an-indefinite-viscoelastic.md) · dead-end
@@ -115,5 +115,9 @@ one SNES solve, $\alpha$ set per iteration, monotone except for a back-off when 
 - 2026-10-05 · [Dead end: Nested iteration (coarse solve, interpolate, fine Newton)](../entries/2026-10-05-dead-end-nested-iteration-coarse-solve-interpolate-fine.md) · dead-end
 - 2026-10-05 · [Dead end: Ladders in V and in the rate-weakening cohesion homotopy](../entries/2026-10-05-dead-end-ladders-in-v-and-in-the-rate-weakening-cohesion.md) · dead-end
 - 2026-10-05 · [Dead end: A fixed-h `-snes_test_jacobian`](../entries/2026-10-05-dead-end-a-fixed-h-snes-test-jacobian.md) · dead-end
+
+Retired (superseded, absorbed or discarded):
+
+- 2026-10-29 · [A datum-only cold start on the rotated path sets its convergence reference from the lifted iterate and takes one increment more than it needs](../entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md) · finding · superseded → 2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md
 
 <!-- END ENTRIES -->

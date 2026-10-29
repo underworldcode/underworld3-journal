@@ -50,6 +50,7 @@ project:
         - title: "2026-10"
           children:
             - file: entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md
+            - file: entries/2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md
             - file: entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md
             - file: entries/2026-10-28-which-fault-mesh-construction-is-used-in-practice.md
             - file: entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md

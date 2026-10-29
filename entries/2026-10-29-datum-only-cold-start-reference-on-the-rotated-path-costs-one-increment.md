@@ -4,7 +4,8 @@ date: 2026-10-29
 authors: [wombat session_01HxWvn5rMK67zasgirdXszQ (Fault Models Code Unification), docs hub]
 options:
   kind: finding
-  status: live
+  status: superseded
+  superseded_by: 2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md
   topics: [solvers-and-multigrid]
   links:
     - https://github.com/underworldcode/underworld3/tree/feature/fault-split-integration
