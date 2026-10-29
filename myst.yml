@@ -49,6 +49,7 @@ project:
         - file: entries.md
         - title: "2026-10"
           children:
+            - file: entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md
             - file: entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md
             - file: entries/2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md
             - file: entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md

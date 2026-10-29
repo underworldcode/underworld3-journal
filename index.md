@@ -14,10 +14,10 @@ page says what currently stands, and the weekly digest says what moved.
 
 **Topics**
 
-- [Fault multigrid](topics/fault-multigrid.md) · 21 live
+- [Fault multigrid](topics/fault-multigrid.md) · 22 live
 - [Particle-to-field projection](topics/particle-to-field-projection.md) · 5 live
 - [Shear-band length scales](topics/shear-band-length-scales.md) · 25 live
-- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 19 live
+- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 20 live
 - [Transport histories](topics/transport-histories.md) · 5 live
 - [Constitutive models](topics/viscoelastic-constitutive-models.md) · 8 live
 - [Viscoelastic stretch at large steps](topics/viscoelastic-stretch-at-large-steps.md) · 6 live
@@ -41,6 +41,7 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-10-29 · [Which multigrid tail goes under the finest ladder: the lean split chain in production; a single ladder over the welded base only on a linear rig up to a band ratio of about 12](entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md) · decision
 - 2026-10-29 · [A per-level wall rotation cuts a rotated free-slip custom-FMG solve on an adapted annulus from 18 serial and 197 parallel velocity iterations to 3 and 4](entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md) · measurement
 - 2026-10-29 · [Under continuation a datum-only cold start skips its Picard phase and still converges in 10 Newton iterations: not a must-fix](entries/2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md) · measurement
 - 2026-10-29 · [A datum-only cold start on the rotated path sets its convergence reference from the lifted iterate and takes one increment more than it needs](entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md) · finding
@@ -60,6 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-17 · [Box fault: multigrid iteration counts after the fix](entries/2026-10-17-box-fault-multigrid-iteration-counts-after-the-fix.md) · measurement
 - 2026-10-17 · [Box fault: implementation status (mesher, damage band, ported fixes)](entries/2026-10-17-box-fault-implementation-status-mesher-damage-band-ported-fixes.md) · finding
 - 2026-10-17 · [Box fault: implementation as built (gmsh patch + registered coarse tail, sign, cost)](entries/2026-10-17-box-fault-implementation-as-built-gmsh-patch-registered-coarse.md) · measurement
-- 2026-10-17 · [Box fault: first results - the x-parallel null and the oblique walk](entries/2026-10-17-box-fault-first-results-the-x-parallel-null-and-the-oblique-walk.md) · finding
 
 [All entries](entries.md)
