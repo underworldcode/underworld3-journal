@@ -14,10 +14,10 @@ page says what currently stands, and the weekly digest says what moved.
 
 **Topics**
 
-- [Fault multigrid](topics/fault-multigrid.md) · 23 live
+- [Fault multigrid](topics/fault-multigrid.md) · 24 live
 - [Particle-to-field projection](topics/particle-to-field-projection.md) · 5 live
 - [Shear-band length scales](topics/shear-band-length-scales.md) · 25 live
-- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 20 live
+- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 21 live
 - [Transport histories](topics/transport-histories.md) · 5 live
 - [Constitutive models](topics/viscoelastic-constitutive-models.md) · 8 live
 - [Viscoelastic stretch at large steps](topics/viscoelastic-stretch-at-large-steps.md) · 6 live
@@ -41,6 +41,7 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-10-30 · [The production chain puts the 2S ladder on the base's finest level, beside the S ladder, and the 4S ladder one level down; the rig's band-ratio table is confounded with cell aspect](entries/2026-10-30-the-production-chain-puts-2s-on-the-finest-base-level-and-4s-one-level-down.md) · finding
 - 2026-10-30 · [Ladder levels nest along the spine, not by vertices, when the band widens with the level as production does](entries/2026-10-30-ladder-levels-nest-along-the-spine-not-by-vertices-when-the-band-widens.md) · finding
 - 2026-10-29 · [Which multigrid tail goes under the finest ladder: the lean split chain in production; a single ladder over the welded base only on a linear rig up to a band ratio of about 12](entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md) · decision
 - 2026-10-29 · [A per-level wall rotation cuts a rotated free-slip custom-FMG solve on an adapted annulus from 18 serial and 197 parallel velocity iterations to 3 and 4](entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md) · measurement
@@ -60,6 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-17 · [Box fault: side walls traction-free, blind fault under a damage band](entries/2026-10-17-box-fault-side-walls-traction-free-blind-fault-under-a-damage.md) · finding
 - 2026-10-17 · [Box fault: post-fix step cost; first run in progress](entries/2026-10-17-box-fault-post-fix-step-cost-first-run-in-progress.md) · measurement
 - 2026-10-17 · [Box fault: multigrid iteration counts after the fix](entries/2026-10-17-box-fault-multigrid-iteration-counts-after-the-fix.md) · measurement
-- 2026-10-17 · [Box fault: implementation status (mesher, damage band, ported fixes)](entries/2026-10-17-box-fault-implementation-status-mesher-damage-band-ported-fixes.md) · finding
 
 [All entries](entries.md)
