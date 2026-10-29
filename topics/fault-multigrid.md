@@ -34,10 +34,13 @@ the list at the foot:
   iterations once Newton starts; the lean chain does not cap (entry 2026-10-29). The
   rig's "ratio-12" table is confounded with the rig band's cell aspect (three nodes
   across a fixed width) and does not set a production limit (entry 2026-10-30).
-  **Provisional above a band ratio of about 8**: the lean chain is measured only
-  there, and a sweep of welded, lean and graded chains at ratios 6, 12 and 25 on the
-  production ladder is commissioned before any tail result is published (entry
-  2026-10-30, Louis).
+  **The sweep (entry 2026-10-31) reverses this, pending Louis's ruling and a fix for
+  #892**: the FAC patch smoother is installed only when the sole split level is the
+  finest, so no chain ever had it, and on the rotated path the patch runs ILU(0)
+  instead of LU. With LU, the welded base with the split finest takes 3 velocity
+  iterations per linear solve at every ratio from 6 to 25 on the yielding lid, 3 to 16
+  times fewer than any chain. With today's library the lean chain at ratio about 8 is
+  still the best arm; with #892 fixed, the welded base with the FAC patch by LU is.
 - **Nesting.** Production widens the band with the level, so the chain nests along the
   spine only; vertex nesting of rails and rungs holds only at the rig's constant width
   (entry 2026-10-30). The transfer is the cell-located, side-aware one either way.
@@ -326,6 +329,7 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 ## Entries
 
+- 2026-10-31 · [Band-ratio sweep: a welded base with the FAC patch solved by LU takes 3 velocity iterations at every ratio from 6 to 25 and beats every split chain; the chains never get the patch, and the rotated path runs the patch as ILU(0) (#892)](../entries/2026-10-31-band-ratio-sweep-welded-base-with-a-fac-lu-patch-beats-every-chain-once-892-is-fixed.md) · measurement
 - 2026-10-30 · [The tail ruling is provisional above a band ratio of about 8: a sweep of three hierarchies on the production ladder is commissioned before any result is published](../entries/2026-10-30-the-tail-ruling-is-provisional-above-a-band-ratio-of-about-8-pending-a-sweep.md) · decision
 - 2026-10-30 · [The production chain puts the 2S ladder on the base's finest level, beside the S ladder, and the 4S ladder one level down; the rig's band-ratio table is confounded with cell aspect](../entries/2026-10-30-the-production-chain-puts-2s-on-the-finest-base-level-and-4s-one-level-down.md) · finding
 - 2026-10-30 · [Ladder levels nest along the spine, not by vertices, when the band widens with the level as production does](../entries/2026-10-30-ladder-levels-nest-along-the-spine-not-by-vertices-when-the-band-widens.md) · finding
