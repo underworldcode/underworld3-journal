@@ -47,6 +47,10 @@ project:
     - title: Entries
       children:
         - file: entries.md
+        - title: "2026-11"
+          children:
+            - file: entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md
+            - file: entries/2026-11-01-fac-patch-blocks-are-lu-the-design-was-adopted-and-never-ran-on-the-rotated-path.md
         - title: "2026-10"
           children:
             - file: entries/2026-10-31-band-ratio-sweep-welded-base-with-a-fac-lu-patch-beats-every-chain-once-892-is-fixed.md

@@ -41,6 +41,8 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-11-01 · [The production multigrid tail for a split fault is the welded base with the split S level on top and the FAC LU patch on that finest level; the chain of split ladders is the measured alternative, not the production tail (Louis, 2026-11-01)](entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md) · decision
+- 2026-11-01 · [FAC patch blocks are LU and ILU there is a regression: the LU block solve of #670 was measured, made the default and never ran on the rotated path, because the composite's ASM child read the options after the rotated path had deleted them (#892, fixed by #912)](entries/2026-11-01-fac-patch-blocks-are-lu-the-design-was-adopted-and-never-ran-on-the-rotated-path.md) · finding
 - 2026-10-31 · [Band-ratio sweep: a welded base with the FAC patch solved by LU takes 3 velocity iterations at every ratio from 6 to 25 and beats every split chain; the chains never get the patch, and the rotated path runs the patch as ILU(0) (#892)](entries/2026-10-31-band-ratio-sweep-welded-base-with-a-fac-lu-patch-beats-every-chain-once-892-is-fixed.md) · measurement
 - 2026-10-30 · [The tail ruling is provisional above a band ratio of about 8: a sweep of three hierarchies on the production ladder is commissioned before any result is published](entries/2026-10-30-the-tail-ruling-is-provisional-above-a-band-ratio-of-about-8-pending-a-sweep.md) · decision
 - 2026-10-30 · [The production chain puts the 2S ladder on the base's finest level, beside the S ladder, and the 4S ladder one level down; the rig's band-ratio table is confounded with cell aspect](entries/2026-10-30-the-production-chain-puts-2s-on-the-finest-base-level-and-4s-one-level-down.md) · finding
@@ -59,7 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-18 · [Box fault: 60 degree walk is left-lateral (slip sense corrected)](entries/2026-10-18-box-fault-60-degree-walk-is-left-lateral-slip-sense-corrected.md) · finding
 - 2026-10-17 · [Viscoelastic stretch at large steps: the wall layer measured (extension at the stagnation point, tension on the shoulders, unresolved), FENE-P capped at the same place and step, the consequences for yielding](entries/2026-10-17-viscoelastic-stretch-at-large-steps-the-wall-layer-measured.md) · measurement
 - 2026-10-17 · [Tidal faulted shell: mesh figure and resolution notes](entries/2026-10-17-tidal-faulted-shell-mesh-figure-and-resolution-notes.md) · measurement
-- 2026-10-17 · [Box fault: the parallel multigrid defect and its fix](entries/2026-10-17-box-fault-the-parallel-multigrid-defect-and-its-fix.md) · finding
-- 2026-10-17 · [Box fault: side walls traction-free, blind fault under a damage band](entries/2026-10-17-box-fault-side-walls-traction-free-blind-fault-under-a-damage.md) · finding
 
 [All entries](entries.md)

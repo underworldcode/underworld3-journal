@@ -11,41 +11,58 @@ options:
 Migrated from the wiki page [Fault-multigrid](https://github.com/underworldcode/underworld3/wiki/Fault-multigrid) on 2026-10-27 as this topic page's starting text (written 2026-10-13 to 2026-10-15). The dated entries at the foot are the record; this text is trimmed as its content moves into guides, subsystem pages and entries.
 ```
 
-## Current understanding (2026-10-30)
+## Current understanding (2026-11-01)
 
-Four things are settled since the wiki text below was written, each with its entry in
-the list at the foot:
+Five things are settled since the wiki text below was written, each with its entry in
+the list at the foot. The split-level library itself (`fault_mg.py`,
+`add_fault(split_levels=True)`, the per-level frames, the thin-sheet solver) has been
+on `development` since #889 and #890 merged on 2026-10-31, and `Mesh.multigrid_levels`
+(#915) returns a mesh's levels coarsest first, the mesh itself last.
 
 - **Construction in practice is the placed ladder, not bisection.** Every production
   driver places the fault as a structured ladder band into a copy of the base's finest
   level (`place_fault_ribbon_2d(..., mesher="ladder", split=True)`, rung spacing $S$,
-  band $2S$) and builds the split chain by hand; adapt-and-cut is the automated library
-  route and the one the hierarchy strategies were compared on (entry 2026-10-28).
-- **The chain's hosts.** Each ladder is placed into a *copy* of a base level; the base
-  and its levels are never modified (the placement reads the host's DM and returns a
-  new one). The $2S$ ladder goes into a copy of the base's finest level, as the $S$
-  ladder does, and the $4S$ ladder into a copy of the level below. The solver's level
-  list is then the base's coarser levels as they are, the two ladder-bearing copies,
-  and the finest; it has as many levels as the welded hierarchy, and the two base
-  levels whose copies carry ladders are simply not in it (entry 2026-10-30; the wiki
+  band $2S$); adapt-and-cut is the automated library route and the one the hierarchy
+  strategies were compared on (entry 2026-10-28).
+- **The tail is ruled (Louis, 2026-11-01, on #892): the welded base with the split
+  $S$ level on top and the FAC LU patch on that finest level.**
+  `set_custom_fmg(stokes, base.multigrid_levels, field_id=0)` on the placed mesh; the
+  patch comes from the split's coincident pairs without being asked for, and its
+  blocks are LU with a nonzero shift. With the LU blocks running it takes 7 velocity
+  iterations per Newton increment on the yielding-lid box at band ratios 8, 16 and 25,
+  where the lean chain takes 28 to 76, and 66 over a linear solve at ratios 6 to 24
+  where the chain takes 83 to 166 (entry 2026-11-01, decision). The chain of split
+  ladders is the measured alternative, not production: its levels never carry the
+  patch. Still open: the drivers' `uw_chain` default changes after kaiju's np 16
+  annulus run; whether split coarse levels stay a library option; the cost of the LU
+  block in 3-D, where it grows with the band's rows.
+- **Why this journal preferred the chain for three days, and why that was wrong.**
+  Every comparison of the chain against the welded tail from 2026-09-03 to 2026-10-31
+  was made with the finest patch's blocks running unshifted ILU(0) instead of the
+  configured LU: `_configure_pcmg` wrote the block options, the rotated path deleted
+  them after forcing the smoother's set-up, and the composite's ASM child read the
+  database only at its first apply (#892, fixed by #912). The LU default arrived with
+  composite mode in one commit (891c9bb0, 2026-09-03), measured on the non-rotated TI
+  rig; on the rotated path it never ran. The chain's levels skip FAC detection
+  (`custom_mg.py:1556`), so the sweep of 2026-10-31 compared chains without the patch
+  against a welded tail with a degraded one, and only recording each level's smoother
+  exposed it. The intent now lives in the code ("FAC blocks are LU; ILU there is a
+  regression"), guarded by `test_1090` reading back every level's live smoother
+  (entry 2026-11-01, finding). The decision entries of 2026-10-29 (the lean chain in
+  production) and 2026-10-30 (provisional above ratio about 8) are superseded.
+- **The chain's hosts**, for the alternative. Each ladder is placed into a *copy* of a
+  base level; the base and its levels are never modified (the placement reads the
+  host's DM and returns a new one). The $2S$ ladder goes into a copy of the base's
+  finest level, as the $S$ ladder does, and the $4S$ ladder into a copy of the level
+  below; the solver's list is the base's coarser levels, the two ladder-bearing copies
+  and the finest, as many levels as the welded hierarchy (entry 2026-10-30; the wiki
   text and two earlier entries say "one and two steps below the finest", which the
   code and the guide's cell counts contradict).
-- **Why the chain.** A yielding lid caps the welded tail's velocity solve at 200
-  iterations once Newton starts; the lean chain does not cap (entry 2026-10-29). The
-  rig's "ratio-12" table is confounded with the rig band's cell aspect (three nodes
-  across a fixed width) and does not set a production limit (entry 2026-10-30).
-  **The sweep (entry 2026-10-31) reverses this, pending Louis's ruling and a fix for
-  #892**: the FAC patch smoother is installed only when the sole split level is the
-  finest, so no chain ever had it, and on the rotated path the patch runs ILU(0)
-  instead of LU. With LU, the welded base with the split finest takes 3 velocity
-  iterations per linear solve at every ratio from 6 to 25 on the yielding lid, 3 to 16
-  times fewer than any chain. With today's library the lean chain at ratio about 8 is
-  still the best arm; with #892 fixed, the welded base with the FAC patch by LU is.
 - **Nesting.** Production widens the band with the level, so the chain nests along the
   spine only; vertex nesting of rails and rungs holds only at the rig's constant width
   (entry 2026-10-30). The transfer is the cell-located, side-aware one either way.
 
-What we understand about geometric multigrid for faults on adapt-on-top meshes: the rulings that fix the shape of the hierarchy, the hierarchies we tried and the one we settled on (C: every add-on level carries the fault, the background never cut), the ladder as that hierarchy with a realisation switch, the pieces that make a split level work, how it behaves as the fault is refined, and what it does and does not do in parallel. The library is `utilities/fault_mg.py` with hooks in `custom_mg`, `rotated_bc`, `Mesh.add_fault` and `meshing/extrude.py` (branch `feature/fault-split-multigrid`, 2026-10-14); the governing document in the repository is `docs/developer/subsystems/fault-split-multigrid.md`, the exploration record `docs/developer/design/FAULT_MULTIGRID_HIERARCHIES.md`. The parallel fault-network machinery this builds on is PR #672 (`docs/developer/design/fault-parallel-placement-2026-09.md`). Figures are generated by `scripts/sessions/fault_mg/fig_*.py` on that branch.
+What we understand about geometric multigrid for faults on adapt-on-top meshes: the rulings that fix the shape of the hierarchy, the hierarchies we tried and the one we settled on (C: every add-on level carries the fault, the background never cut), the ladder as that hierarchy with a realisation switch, the pieces that make a split level work, how it behaves as the fault is refined, and what it does and does not do in parallel. The library is `utilities/fault_mg.py` with hooks in `custom_mg`, `rotated_bc`, `Mesh.add_fault` and `meshing/extrude.py` (written on `feature/fault-split-multigrid`, 2026-10-14; on `development` since 2026-10-31); the governing document in the repository is `docs/developer/subsystems/fault-split-multigrid.md`, the exploration record `docs/developer/design/FAULT_MULTIGRID_HIERARCHIES.md`. The parallel fault-network machinery this builds on is PR #672 (`docs/developer/design/fault-parallel-placement-2026-09.md`). Figures are generated by `scripts/sessions/fault_mg/fig_*.py` on that branch.
 
 ## The rulings
 
@@ -312,7 +329,7 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 ## Open
 
-- **The ribbon replay recipe**, so `FaultNetwork.build(width=w)` gets its nested 2:1 ladder levels on every add-on level automatically, with the realisation (split spine or TI band) as the switch. The hierarchy is measured; the library plumbing is not written.
+- **The ribbon replay recipe**, so `FaultNetwork.build(width=w)` gets its nested 2:1 ladder levels on every add-on level automatically, with the realisation (split spine or TI band) as the switch. The hierarchy is measured; the library plumbing is not written. Since the tail ruling of 2026-11-01 it is not a production need: it matters only if split coarse levels stay a library option.
 - **Partitioning the add-on levels for themselves**, star-weighted, the base untouched: the larger part of the measured imbalance and the 8-rank cap.
 - The thin layer's own multigrid: iterations grow with refinement on the extruded twin.
 - Networks through the levels where the ligament survives the coarsening; faults near a boundary.
@@ -324,16 +341,17 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 - 2026-10-13 — Exploration of A, B2, C, D on the box (prototype drivers), C chosen; library implementation in 2-D, 3-D (extruded layer, sheet patches at one add-on level) and parallel; merged with development's fault-network work (#672); co-location of the level stars; the ladder measured for both realisations; the orphan injection retired.
 - 2026-10-14 — The annulus example: the outcropping ladder, the per-level wall rotation, the placer on curved walls; profile of meshing against solve. The depth measurements: a single ladder carries to ratio ~12; TI takes welded mids, contact needs the split chain or a graded base. The add-on formulation section (where balance lives; lean band, composite grid, partition the add-on). Page restructured around the rulings (base never rebalanced; one nested ladder hierarchy with a realisation switch); the parallel imbalance decomposed into base (balanced), inherited child partition and gathered star.
+- 2026-10-31 to 2026-11-01 — The library merged to `development` (#882, #889, #890); `Mesh.multigrid_levels` (#915). The tail sweep found that the chain's levels never carried the patch and that the rotated path ran the patch's blocks as ILU(0) (#892, fixed by #912); Louis ruled the production tail the welded base with the split finest level and the FAC LU patch, the chain the measured alternative. "Current understanding" rewritten; the 2026-10-29 and 2026-10-30 tail decisions superseded.
 
 <!-- BEGIN ENTRIES (generated by scripts/build_index.py; do not edit) -->
 
 ## Entries
 
+- 2026-11-01 · [The production multigrid tail for a split fault is the welded base with the split S level on top and the FAC LU patch on that finest level; the chain of split ladders is the measured alternative, not the production tail (Louis, 2026-11-01)](../entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md) · decision
+- 2026-11-01 · [FAC patch blocks are LU and ILU there is a regression: the LU block solve of #670 was measured, made the default and never ran on the rotated path, because the composite's ASM child read the options after the rotated path had deleted them (#892, fixed by #912)](../entries/2026-11-01-fac-patch-blocks-are-lu-the-design-was-adopted-and-never-ran-on-the-rotated-path.md) · finding
 - 2026-10-31 · [Band-ratio sweep: a welded base with the FAC patch solved by LU takes 3 velocity iterations at every ratio from 6 to 25 and beats every split chain; the chains never get the patch, and the rotated path runs the patch as ILU(0) (#892)](../entries/2026-10-31-band-ratio-sweep-welded-base-with-a-fac-lu-patch-beats-every-chain-once-892-is-fixed.md) · measurement
-- 2026-10-30 · [The tail ruling is provisional above a band ratio of about 8: a sweep of three hierarchies on the production ladder is commissioned before any result is published](../entries/2026-10-30-the-tail-ruling-is-provisional-above-a-band-ratio-of-about-8-pending-a-sweep.md) · decision
 - 2026-10-30 · [The production chain puts the 2S ladder on the base's finest level, beside the S ladder, and the 4S ladder one level down; the rig's band-ratio table is confounded with cell aspect](../entries/2026-10-30-the-production-chain-puts-2s-on-the-finest-base-level-and-4s-one-level-down.md) · finding
 - 2026-10-30 · [Ladder levels nest along the spine, not by vertices, when the band widens with the level as production does](../entries/2026-10-30-ladder-levels-nest-along-the-spine-not-by-vertices-when-the-band-widens.md) · finding
-- 2026-10-29 · [Which multigrid tail goes under the finest ladder: the lean split chain in production; a single ladder over the welded base only on a linear rig up to a band ratio of about 12](../entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md) · decision
 - 2026-10-29 · [A per-level wall rotation cuts a rotated free-slip custom-FMG solve on an adapted annulus from 18 serial and 197 parallel velocity iterations to 3 and 4](../entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md) · measurement
 - 2026-10-28 · [Which fault-mesh construction is used in practice: the placed ladder with a hand-built split chain; adapt-and-cut is the automated route the hierarchy was measured on](../entries/2026-10-28-which-fault-mesh-construction-is-used-in-practice.md) · finding
 - 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](../entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement
@@ -355,5 +373,10 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 - 2026-10-13 · [Dead end: Node-cloud transfers to a split coarse level](../entries/2026-10-13-dead-end-node-cloud-transfers-to-a-split-coarse-level.md) · dead-end
 - 2026-10-13 · [Dead end: Nearest-node injection for orphan columns](../entries/2026-10-13-dead-end-nearest-node-injection-for-orphan-columns.md) · dead-end
 - 2026-10-13 · [Dead end: Extrapolated weights](../entries/2026-10-13-dead-end-extrapolated-weights.md) · dead-end
+
+Retired (superseded, absorbed or discarded):
+
+- 2026-10-30 · [The tail ruling is provisional above a band ratio of about 8: a sweep of three hierarchies on the production ladder is commissioned before any result is published](../entries/2026-10-30-the-tail-ruling-is-provisional-above-a-band-ratio-of-about-8-pending-a-sweep.md) · decision · superseded → entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md
+- 2026-10-29 · [Which multigrid tail goes under the finest ladder: the lean split chain in production; a single ladder over the welded base only on a linear rig up to a band ratio of about 12](../entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md) · decision · superseded → entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md
 
 <!-- END ENTRIES -->

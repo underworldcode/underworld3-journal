@@ -4,7 +4,8 @@ date: 2026-10-30
 authors: [Louis Moresi, wombat notes session_011S876ckjYqqth1aPyojrhh, docs hub]
 options:
   kind: decision
-  status: live
+  status: superseded
+  superseded_by: entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md
   topics: [fault-multigrid, solvers-and-multigrid]
   links:
     - https://github.com/lmoresi/uw3-campaigns/blob/main/FAULT-SPLIT-INTEGRATION.md

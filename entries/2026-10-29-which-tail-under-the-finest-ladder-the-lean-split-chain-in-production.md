@@ -4,7 +4,8 @@ date: 2026-10-29
 authors: [docs hub session_01HxWvn87HYCEJodpgCdaBro, for Louis Moresi and the UWTN 2026-022 draft]
 options:
   kind: decision
-  status: live
+  status: superseded
+  superseded_by: entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md
   topics: [fault-multigrid, solvers-and-multigrid]
   links:
     - https://github.com/underworldcode/underworld3/blob/feature/fault-split-integration/docs/developer/guides/faults-in-convection.md
