@@ -14,10 +14,10 @@ page says what currently stands, and the weekly digest says what moved.
 
 **Topics**
 
-- [Fault multigrid](topics/fault-multigrid.md) · 28 live
+- [Fault multigrid](topics/fault-multigrid.md) · 29 live
 - [Particle-to-field projection](topics/particle-to-field-projection.md) · 5 live
 - [Shear-band length scales](topics/shear-band-length-scales.md) · 25 live
-- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 25 live
+- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 26 live
 - [Transport histories](topics/transport-histories.md) · 5 live
 - [Constitutive models](topics/viscoelastic-constitutive-models.md) · 8 live
 - [Viscoelastic stretch at large steps](topics/viscoelastic-stretch-at-large-steps.md) · 6 live
@@ -42,6 +42,7 @@ page says what currently stands, and the weekly digest says what moved.
 ## Recent entries
 
 - 2026-11-01 · [The production multigrid tail for a split fault is the welded base with the split S level on top and the FAC LU patch on that finest level; the chain of split ladders is the measured alternative, not the production tail (Louis, 2026-11-01)](entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md) · decision
+- 2026-11-01 · [The FAC patch is on one rank by construction: the default placement, seams='gather', runs partition_addon first and gives the band's region to one rank at any rank count; the serial patch solve measured at np 16 comes from the placement, not from the welded tail](entries/2026-11-01-the-patch-is-on-one-rank-by-construction-the-default-gather-placement-not-the-welded-tail.md) · finding
 - 2026-11-01 · [The np 16 annulus pair ran at a band ratio of 3.9, below the smallest ratio in UWTN 2026-022's sweep table (6.06 to 24.8), which is why the welded tail's patch bought nothing measurable there; the runs used the library's default tolerances, and a pressure rtol of 1e-2 halves the solve with the same answer](entries/2026-11-01-the-annulus-pair-ran-at-band-ratio-3-9-below-the-sweep-table-which-is-why-the-patch-bought-nothing-there.md) · finding
 - 2026-11-01 · [The np 16 annulus, corrected by kaiju's budget: the welded arm carried a 3584-row patch on one rank and the chain none; the velocity work is equal (8.65 against 8.74 F-cycles per solve) and the times are a wash; the serial patch LU costs 5 to 6 % of the solve, not little](entries/2026-11-01-np-16-annulus-corrected-the-arms-had-different-patches-the-velocity-work-is-equal-and-the-serial-patch-costs-5-to-6-percent.md) · measurement
 - 2026-11-01 · [The production annulus at np 16 confirms the welded tail by a small margin (5.9 against 7.7 velocity iterations per Newton increment, the same answers), because both arms carry the same finest patch; that patch, 465 rows and 105 split pairs, sits on one rank, so its LU solve is serial](entries/2026-11-01-np-16-annulus-confirms-the-welded-tail-by-a-small-margin-and-the-patch-is-serial-on-one-rank.md) · measurement
@@ -60,6 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-18 · [Viscoelastic stretch at large steps: corrections from the adversarial review (Pakdel-McKinley inside the layer, time-scheme cost, tangent at 1/120, SPD scope, conformation-check scope, the refusals, merge order after #800)](entries/2026-10-18-viscoelastic-stretch-at-large-steps-corrections-from-the.md) · measurement
 - 2026-10-18 · [Box fault: walk scaling with the Wallace number and the clamping-phase result](entries/2026-10-18-box-fault-walk-scaling-with-the-wallace-number-and-the-clamping.md) · measurement
 - 2026-10-18 · [Box fault: orientation series (30, 45, 60 degrees) against the in-phase clamping](entries/2026-10-18-box-fault-orientation-series-30-45-60-degrees-against-the-in.md) · finding
-- 2026-10-18 · [Box fault: De 0.3 steady walk](entries/2026-10-18-box-fault-de-0-3-steady-walk.md) · finding
 
 [All entries](entries.md)
