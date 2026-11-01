@@ -11,14 +11,27 @@ options:
 Migrated from the wiki page [Fault-multigrid](https://github.com/underworldcode/underworld3/wiki/Fault-multigrid) on 2026-10-27 as this topic page's starting text (written 2026-10-13 to 2026-10-15). The dated entries at the foot are the record; this text is trimmed as its content moves into guides, subsystem pages and entries.
 ```
 
-## Current understanding (2026-11-01)
+## Current understanding (2026-11-02)
 
-Five things are settled since the wiki text below was written, each with its entry in
+Six things are settled since the wiki text below was written, each with its entry in
 the list at the foot. The split-level library itself (`fault_mg.py`,
 `add_fault(split_levels=True)`, the per-level frames, the thin-sheet solver) has been
 on `development` since #889 and #890 merged on 2026-10-31, and `Mesh.multigrid_levels`
 (#915) returns a mesh's levels coarsest first, the mesh itself last.
 
+- **The add-on is the line (Louis, 2026-11-02).** The base's own levels, welded, one
+  split level into which the fault is placed, and the FAC patch on that level by LU, is
+  what is developed. The fault carries its own resolution: it comes as a divided line
+  (or a triangulated surface) and its points are the ladder's rungs; no parameter $S$
+  sets the along-strike resolution, and the drivers' `uw_spacing` and band width $2S$
+  are to go. Refinement around the fault is a separate question from the fault's own
+  nodes. Split coarse levels (the chain) are not developed further and stay in the
+  library as they are, for comparison. Evidence: the add-on at 66 to 125 velocity
+  iterations against the chain's 166 to 725 on five 2-D fixtures once the patch's
+  defaults were fixed (#892, #918, #921); the chain's limit is that every coarse level
+  must carry a coarser copy of the fault, which in 3-D is surgery on every level (entry
+  2026-11-02, decision). Open under it: the gathered patch's cost (iterative blocks,
+  the 3-D single block, the patch divided across ranks), and the split tip's depth.
 - **Construction in practice is the placed ladder, not bisection.** Every production
   driver places the fault as a structured ladder band into a copy of the base's finest
   level (`place_fault_ribbon_2d(..., mesher="ladder", split=True)`, rung spacing $S$,
@@ -46,8 +59,9 @@ on `development` since #889 and #890 merged on 2026-10-31, and `Mesh.multigrid_l
   ratios (entry 2026-11-01, the band-ratio finding). The patch's LU solve is serial on the one rank the default gather placement gives the band to (`seams="gather"` runs `partition_addon` first, so the band, its pairs and the patch are on one rank by construction at any rank count; entry 2026-11-01 on the placement), which is to say on the rank that holds
   the fault, 5 to 6 % of the solve at np 16 while the other ranks wait: the
   gathered-star trade of ruling 1, growing with the rank count or several faults in one
-  partition (#895). Still open: whether split coarse levels stay a library option; the
-  cost of the LU block in 3-D, where it grows with the band's rows.
+  partition (#895). Whether split coarse levels stay a library option was settled on
+  2026-11-02 (kept as they are, not developed further; the bullet above). Still open:
+  the cost of the LU block in 3-D, where it grows with the band's rows.
 - **Why this journal preferred the chain for three days, and why that was wrong.**
   Every comparison of the chain against the welded tail from 2026-09-03 to 2026-10-31
   was made with the finest patch's blocks running unshifted ILU(0) instead of the
@@ -341,7 +355,7 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 ## Open
 
-- **The ribbon replay recipe**, so `FaultNetwork.build(width=w)` gets its nested 2:1 ladder levels on every add-on level automatically, with the realisation (split spine or TI band) as the switch. The hierarchy is measured; the library plumbing is not written. Since the tail ruling of 2026-11-01 it is not a production need: it matters only if split coarse levels stay a library option.
+- **The ribbon replay recipe**, so `FaultNetwork.build(width=w)` gets its nested 2:1 ladder levels on every add-on level automatically, with the realisation (split spine or TI band) as the switch. The hierarchy is measured; the library plumbing is not written. Retired as a production item: the tail ruling of 2026-11-01 needs no add-on levels, and the decision of 2026-11-02 does not develop split coarse levels further.
 - **Partitioning the add-on levels for themselves**, star-weighted, the base untouched: the larger part of the measured imbalance and the 8-rank cap.
 - The thin layer's own multigrid: iterations grow with refinement on the extruded twin.
 - Networks through the levels where the ligament survives the coarsening; faults near a boundary.
@@ -359,6 +373,7 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 ## Entries
 
+- 2026-11-02 · [The add-on is the line to invest in for split faults: the fault carries its own resolution as a divided line, and split coarse levels are not developed further (Louis, 2026-11-02)](../entries/2026-11-02-the-add-on-is-the-line-for-split-faults-the-fault-carries-its-own-resolution-and-split-coarse-levels-are-not-developed-further.md) · decision
 - 2026-11-01 · [The production multigrid tail for a split fault is the welded base with the split S level on top and the FAC LU patch on that finest level; the chain of split ladders is the measured alternative, not the production tail (Louis, 2026-11-01)](../entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md) · decision
 - 2026-11-01 · [The FAC patch is on one rank by construction: the default placement, seams='gather', runs partition_addon first and gives the band's region to one rank at any rank count; the serial patch solve measured at np 16 comes from the placement, not from the welded tail](../entries/2026-11-01-the-patch-is-on-one-rank-by-construction-the-default-gather-placement-not-the-welded-tail.md) · finding
 - 2026-11-01 · [The np 16 annulus pair ran at a band ratio of 3.9, below the smallest ratio in UWTN 2026-022's sweep table (6.06 to 24.8), which is why the welded tail's patch bought nothing measurable there; the runs used the library's default tolerances, and a pressure rtol of 1e-2 halves the solve with the same answer](../entries/2026-11-01-the-annulus-pair-ran-at-band-ratio-3-9-below-the-sweep-table-which-is-why-the-patch-bought-nothing-there.md) · finding
