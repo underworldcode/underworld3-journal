@@ -33,8 +33,14 @@ on `development` since #889 and #890 merged on 2026-10-31, and `Mesh.multigrid_l
   where the lean chain takes 28 to 76, and 66 over a linear solve at ratios 6 to 24
   where the chain takes 83 to 166 (entry 2026-11-01, decision). The chain of split
   ladders is the measured alternative, not production: its levels never carry the
-  patch. Still open: the drivers' `uw_chain` default changes after kaiju's np 16
-  annulus run; whether split coarse levels stay a library option; the cost of the LU
+  patch. The ruling's condition is met: on the production annulus at np 16 the welded
+  base takes 5.9 velocity iterations per Newton increment against the chain's 7.7 with
+  the same answers, a smaller margin than the fixtures' because both arms carry the
+  same finest patch (entry 2026-11-01, measurement); the drivers' `uw_chain` default
+  moves to 0 as the campaign builds move to `development`. That run also shows the
+  whole patch, 465 rows and 105 split pairs, on one rank, so its LU solve is serial:
+  the gathered-star trade of ruling 1, an imbalance term at larger rank counts (#895).
+  Still open: whether split coarse levels stay a library option; the cost of the LU
   block in 3-D, where it grows with the band's rows.
 - **Why this journal preferred the chain for three days, and why that was wrong.**
   Every comparison of the chain against the welded tail from 2026-09-03 to 2026-10-31
