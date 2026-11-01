@@ -1,7 +1,7 @@
 ---
 title: "The production annulus at np 16 confirms the welded tail by a small margin (5.9 against 7.7 velocity iterations per Newton increment, the same answers), because both arms carry the same finest patch; that patch, 465 rows and 105 split pairs, sits on one rank, so its LU solve is serial"
 date: 2026-11-01
-authors: [kaiju session (science hub), reported by Louis Moresi on underworld3 #892; recorded by the docs hub]
+authors: ["kaiju session (science hub)", "reported by Louis Moresi on underworld3 #892", "recorded by the docs hub"]
 options:
   kind: measurement
   status: superseded

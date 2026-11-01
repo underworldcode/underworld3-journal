@@ -40,8 +40,10 @@ on `development` since #889 and #890 merged on 2026-10-31, and `Mesh.multigrid_l
   measurement; the first np 16 entry, which read a smaller patch and a quarter fewer
   iterations into the pair, is superseded). The welded tail is no worse there and has
   one hierarchy fewer to build, so the drivers' `uw_chain` default moves to 0 as the
-  campaign builds move to `development`; why the annulus shows none of the box's gain
-  is open (band ratio asked for). The patch's LU solve is serial on the rank that holds
+  campaign builds move to `development`. The annulus shows none of the box's gain
+  because its band ratio is 3.9 ($h_b = 0.0156$, $S = 0.004$), below the smallest
+  ratio in the sweep table (6.06), and the patch's gain appears only at the larger
+  ratios (entry 2026-11-01, the band-ratio finding). The patch's LU solve is serial on the rank that holds
   the fault, 5 to 6 % of the solve at np 16 while the other ranks wait: the
   gathered-star trade of ruling 1, growing with the rank count or several faults in one
   partition (#895). Still open: whether split coarse levels stay a library option; the
@@ -358,6 +360,8 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 ## Entries
 
 - 2026-11-01 · [The production multigrid tail for a split fault is the welded base with the split S level on top and the FAC LU patch on that finest level; the chain of split ladders is the measured alternative, not the production tail (Louis, 2026-11-01)](../entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md) · decision
+- 2026-11-01 · [The np 16 annulus pair ran at a band ratio of 3.9, below the smallest ratio in UWTN 2026-022's sweep table (6.06 to 24.8), which is why the welded tail's patch bought nothing measurable there; the runs used the library's default tolerances, and a pressure rtol of 1e-2 halves the solve with the same answer](../entries/2026-11-01-the-annulus-pair-ran-at-band-ratio-3-9-below-the-sweep-table-which-is-why-the-patch-bought-nothing-there.md) · finding
+- 2026-11-01 · [The np 16 annulus, corrected by kaiju's budget: the welded arm carried a 3584-row patch on one rank and the chain none; the velocity work is equal (8.65 against 8.74 F-cycles per solve) and the times are a wash; the serial patch LU costs 5 to 6 % of the solve, not little](../entries/2026-11-01-np-16-annulus-corrected-the-arms-had-different-patches-the-velocity-work-is-equal-and-the-serial-patch-costs-5-to-6-percent.md) · measurement
 - 2026-11-01 · [FAC patch blocks are LU and ILU there is a regression: the LU block solve of #670 was measured, made the default and never ran on the rotated path, because the composite's ASM child read the options after the rotated path had deleted them (#892, fixed by #912)](../entries/2026-11-01-fac-patch-blocks-are-lu-the-design-was-adopted-and-never-ran-on-the-rotated-path.md) · finding
 - 2026-10-31 · [Band-ratio sweep: a welded base with the FAC patch solved by LU takes 3 velocity iterations at every ratio from 6 to 25 and beats every split chain; the chains never get the patch, and the rotated path runs the patch as ILU(0) (#892)](../entries/2026-10-31-band-ratio-sweep-welded-base-with-a-fac-lu-patch-beats-every-chain-once-892-is-fixed.md) · measurement
 - 2026-10-30 · [The production chain puts the 2S ladder on the base's finest level, beside the S ladder, and the 4S ladder one level down; the rig's band-ratio table is confounded with cell aspect](../entries/2026-10-30-the-production-chain-puts-2s-on-the-finest-base-level-and-4s-one-level-down.md) · finding
@@ -386,6 +390,7 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 Retired (superseded, absorbed or discarded):
 
+- 2026-11-01 · [The production annulus at np 16 confirms the welded tail by a small margin (5.9 against 7.7 velocity iterations per Newton increment, the same answers), because both arms carry the same finest patch; that patch, 465 rows and 105 split pairs, sits on one rank, so its LU solve is serial](../entries/2026-11-01-np-16-annulus-confirms-the-welded-tail-by-a-small-margin-and-the-patch-is-serial-on-one-rank.md) · measurement · superseded → entries/2026-11-01-np-16-annulus-corrected-the-arms-had-different-patches-the-velocity-work-is-equal-and-the-serial-patch-costs-5-to-6-percent.md
 - 2026-10-30 · [The tail ruling is provisional above a band ratio of about 8: a sweep of three hierarchies on the production ladder is commissioned before any result is published](../entries/2026-10-30-the-tail-ruling-is-provisional-above-a-band-ratio-of-about-8-pending-a-sweep.md) · decision · superseded → entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md
 - 2026-10-29 · [Which multigrid tail goes under the finest ladder: the lean split chain in production; a single ladder over the welded base only on a linear rig up to a band ratio of about 12](../entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md) · decision · superseded → entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md
 

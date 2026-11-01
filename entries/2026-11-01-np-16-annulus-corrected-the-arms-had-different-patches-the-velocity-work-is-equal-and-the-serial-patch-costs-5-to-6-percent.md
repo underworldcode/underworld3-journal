@@ -1,7 +1,7 @@
 ---
 title: "The np 16 annulus, corrected by kaiju's budget: the welded arm carried a 3584-row patch on one rank and the chain none; the velocity work is equal (8.65 against 8.74 F-cycles per solve) and the times are a wash; the serial patch LU costs 5 to 6 % of the solve, not little"
 date: 2026-11-01
-authors: [kaiju session (science hub), reported by Louis Moresi on underworld3 #892; recorded by the docs hub]
+authors: ["kaiju session (science hub)", "reported by Louis Moresi on underworld3 #892", "recorded by the docs hub"]
 options:
   kind: measurement
   status: live
