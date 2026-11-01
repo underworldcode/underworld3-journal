@@ -33,15 +33,19 @@ on `development` since #889 and #890 merged on 2026-10-31, and `Mesh.multigrid_l
   where the lean chain takes 28 to 76, and 66 over a linear solve at ratios 6 to 24
   where the chain takes 83 to 166 (entry 2026-11-01, decision). The chain of split
   ladders is the measured alternative, not production: its levels never carry the
-  patch. The ruling's condition is met: on the production annulus at np 16 the welded
-  base takes 5.9 velocity iterations per Newton increment against the chain's 7.7 with
-  the same answers, a smaller margin than the fixtures' because both arms carry the
-  same finest patch (entry 2026-11-01, measurement); the drivers' `uw_chain` default
-  moves to 0 as the campaign builds move to `development`. That run also shows the
-  whole patch, 465 rows and 105 split pairs, on one rank, so its LU solve is serial:
-  the gathered-star trade of ruling 1, an imbalance term at larger rank counts (#895).
-  Still open: whether split coarse levels stay a library option; the cost of the LU
-  block in 3-D, where it grows with the band's rows.
+  patch. On the production annulus at np 16 (kaiju, `development` 25d62812) the welded
+  tail, with a 3584-row patch on one rank, and the chain, with no patch, do the same
+  velocity work (8.65 against 8.74 F-cycles per solve) in the same time within the
+  run-to-run spread, with the same answers (entry 2026-11-01, the corrected np 16
+  measurement; the first np 16 entry, which read a smaller patch and a quarter fewer
+  iterations into the pair, is superseded). The welded tail is no worse there and has
+  one hierarchy fewer to build, so the drivers' `uw_chain` default moves to 0 as the
+  campaign builds move to `development`; why the annulus shows none of the box's gain
+  is open (band ratio asked for). The patch's LU solve is serial on the rank that holds
+  the fault, 5 to 6 % of the solve at np 16 while the other ranks wait: the
+  gathered-star trade of ruling 1, growing with the rank count or several faults in one
+  partition (#895). Still open: whether split coarse levels stay a library option; the
+  cost of the LU block in 3-D, where it grows with the band's rows.
 - **Why this journal preferred the chain for three days, and why that was wrong.**
   Every comparison of the chain against the welded tail from 2026-09-03 to 2026-10-31
   was made with the finest patch's blocks running unshifted ILU(0) instead of the

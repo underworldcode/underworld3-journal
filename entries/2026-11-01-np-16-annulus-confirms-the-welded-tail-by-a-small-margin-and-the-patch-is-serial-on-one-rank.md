@@ -4,7 +4,8 @@ date: 2026-11-01
 authors: [kaiju session (science hub), reported by Louis Moresi on underworld3 #892; recorded by the docs hub]
 options:
   kind: measurement
-  status: live
+  status: superseded
+  superseded_by: entries/2026-11-01-np-16-annulus-corrected-the-arms-had-different-patches-the-velocity-work-is-equal-and-the-serial-patch-costs-5-to-6-percent.md
   topics: [fault-multigrid, solvers-and-multigrid]
   links:
     - https://github.com/underworldcode/underworld3/issues/892#issuecomment-6550915680
