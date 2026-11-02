@@ -52,14 +52,19 @@ on `development` since #889 and #890 merged on 2026-10-31, and `Mesh.multigrid_l
   run-to-run spread, with the same answers (entry 2026-11-01, the corrected np 16
   measurement; the first np 16 entry, which read a smaller patch and a quarter fewer
   iterations into the pair, is superseded). The welded tail is no worse there and has
-  one hierarchy fewer to build, so the drivers' `uw_chain` default moves to 0 as the
-  campaign builds move to `development`. The annulus shows none of the box's gain
+  one hierarchy fewer to build; the drivers' `uw_chain` default moved to 0 with the
+  campaign's build move to `development` (b440b88, accepted on kaiju job 3154; entry
+  2026-11-02, the drivers' default), which closes the last line of the tail decision's
+  "where enforced". The annulus shows none of the box's gain
   because its band ratio is 3.9 ($h_b = 0.0156$, $S = 0.004$), below the smallest
   ratio in the sweep table (6.06), and the patch's gain appears only at the larger
   ratios (entry 2026-11-01, the band-ratio finding). The patch's LU solve is serial on the one rank the default gather placement gives the band to (`seams="gather"` runs `partition_addon` first, so the band, its pairs and the patch are on one rank by construction at any rank count; entry 2026-11-01 on the placement), which is to say on the rank that holds
   the fault, 5 to 6 % of the solve at np 16 while the other ranks wait: the
   gathered-star trade of ruling 1, growing with the rank count or several faults in one
-  partition (#895). Whether split coarse levels stay a library option was settled on
+  partition (#895). Dividing that patch across ranks (`seams="conform"`, #670) is blocked
+  for every wall-reaching fault in 2-D: the network mesher it needs cannot place a fault
+  whose cavity reaches the domain wall, and the ladder takes only gather (entry
+  2026-11-02, dead-end). Whether split coarse levels stay a library option was settled on
   2026-11-02 (kept as they are, not developed further; the bullet above). Still open:
   the cost of the LU block in 3-D, where it grows with the band's rows.
 - **Why this journal preferred the chain for three days, and why that was wrong.**
@@ -373,7 +378,9 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 ## Entries
 
+- 2026-11-02 · [The campaign drivers default to uw_chain 0 (b440b88), accepted on kaiju at np 16 on development 25d62812: the last 'where enforced' line of the 2026-11-01 tail decision is done, and the drivers' decisions ledger is citable](../entries/2026-11-02-the-drivers-default-to-uw-chain-0-the-last-where-enforced-line-of-the-tail-decision-is-done.md) · measurement
 - 2026-11-02 · [The add-on is the line to invest in for split faults: the fault carries its own resolution as a divided line, and split coarse levels are not developed further (Louis, 2026-11-02)](../entries/2026-11-02-the-add-on-is-the-line-for-split-faults-the-fault-carries-its-own-resolution-and-split-coarse-levels-are-not-developed-further.md) · decision
+- 2026-11-02 · [seams='conform' cannot place a fault that reaches the domain wall in 2-D (the network mesher's cavity reaches the wall), and the ladder takes only gather: dividing the FAC patch across ranks is blocked for every surface-reaching fault until one of the two changes](../entries/2026-11-02-conform-seams-cannot-place-a-wall-reaching-fault-in-2d-so-the-patch-cannot-be-divided-across-ranks-in-the-trench-models.md) · dead-end
 - 2026-11-01 · [The production multigrid tail for a split fault is the welded base with the split S level on top and the FAC LU patch on that finest level; the chain of split ladders is the measured alternative, not the production tail (Louis, 2026-11-01)](../entries/2026-11-01-the-production-tail-for-split-faults-is-the-welded-base-with-the-fac-lu-patch-on-the-split-finest-level.md) · decision
 - 2026-11-01 · [The FAC patch is on one rank by construction: the default placement, seams='gather', runs partition_addon first and gives the band's region to one rank at any rank count; the serial patch solve measured at np 16 comes from the placement, not from the welded tail](../entries/2026-11-01-the-patch-is-on-one-rank-by-construction-the-default-gather-placement-not-the-welded-tail.md) · finding
 - 2026-11-01 · [The np 16 annulus pair ran at a band ratio of 3.9, below the smallest ratio in UWTN 2026-022's sweep table (6.06 to 24.8), which is why the welded tail's patch bought nothing measurable there; the runs used the library's default tolerances, and a pressure rtol of 1e-2 halves the solve with the same answer](../entries/2026-11-01-the-annulus-pair-ran-at-band-ratio-3-9-below-the-sweep-table-which-is-why-the-patch-bought-nothing-there.md) · finding
