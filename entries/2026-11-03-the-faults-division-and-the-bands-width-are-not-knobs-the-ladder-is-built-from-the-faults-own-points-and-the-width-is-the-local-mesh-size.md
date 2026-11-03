@@ -4,7 +4,8 @@ date: 2026-11-03
 authors: ["Louis Moresi", "science hub session_013CgVT1Gx9WTvaZVqU58HsQ (kaiju), which recorded it", "notes session session_011S876ckjYqqth1aPyojrhh on wombat", "recorded by the docs hub"]
 options:
   kind: decision
-  status: live
+  status: superseded
+  superseded_by: entries/2026-11-03-the-ladder-is-equant-half-width-one-cell-and-rungs-at-about-one-cell-recipe-v2-stands-and-the-division-design-goes-to-a-plate-boundaries-module.md
   topics: [fault-multigrid, solvers-and-multigrid]
   links:
     - https://github.com/lmoresi/uw3-campaigns/blob/febbb87/zg95_lid_regimes/DECISIONS.md

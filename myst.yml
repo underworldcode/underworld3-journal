@@ -49,6 +49,7 @@ project:
         - file: entries.md
         - title: "2026-11"
           children:
+            - file: entries/2026-11-03-the-ladder-is-equant-half-width-one-cell-and-rungs-at-about-one-cell-recipe-v2-stands-and-the-division-design-goes-to-a-plate-boundaries-module.md
             - file: entries/2026-11-03-the-faults-division-and-the-bands-width-are-not-knobs-the-ladder-is-built-from-the-faults-own-points-and-the-width-is-the-local-mesh-size.md
             - file: entries/2026-11-02-the-drivers-default-to-uw-chain-0-the-last-where-enforced-line-of-the-tail-decision-is-done.md
             - file: entries/2026-11-02-the-add-on-is-the-line-for-split-faults-the-fault-carries-its-own-resolution-and-split-coarse-levels-are-not-developed-further.md

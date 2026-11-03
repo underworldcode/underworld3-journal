@@ -41,6 +41,7 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-11-03 · [The ladder is equant: its half-width is one cell and its rungs are about one cell apart, so recipe v2 stands, and the fault-division design goes to a plate-boundaries module (Louis, 2026-11-03)](entries/2026-11-03-the-ladder-is-equant-half-width-one-cell-and-rungs-at-about-one-cell-recipe-v2-stands-and-the-division-design-goes-to-a-plate-boundaries-module.md) · decision
 - 2026-11-03 · [The fault's division and the band's width are not knobs: the ladder is built from the fault's own points, and the band is as wide as the local mesh size (Louis, 2026-11-03, clarifying decision 1b)](entries/2026-11-03-the-faults-division-and-the-bands-width-are-not-knobs-the-ladder-is-built-from-the-faults-own-points-and-the-width-is-the-local-mesh-size.md) · decision
 - 2026-11-02 · [The campaign drivers default to uw_chain 0 (b440b88), accepted on kaiju at np 16 on development 25d62812: the last 'where enforced' line of the 2026-11-01 tail decision is done, and the drivers' decisions ledger is citable](entries/2026-11-02-the-drivers-default-to-uw-chain-0-the-last-where-enforced-line-of-the-tail-decision-is-done.md) · measurement
 - 2026-11-02 · [The add-on is the line to invest in for split faults: the fault carries its own resolution as a divided line, and split coarse levels are not developed further (Louis, 2026-11-02)](entries/2026-11-02-the-add-on-is-the-line-for-split-faults-the-fault-carries-its-own-resolution-and-split-coarse-levels-are-not-developed-further.md) · decision
@@ -60,6 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-29 · [Under continuation a datum-only cold start skips its Picard phase and still converges in 10 Newton iterations: not a must-fix](entries/2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md) · measurement
 - 2026-10-29 · [A datum-only cold start on the rotated path sets its convergence reference from the lifted iterate and takes one increment more than it needs](entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md) · finding
 - 2026-10-28 · [Which fault-mesh construction is used in practice: the placed ladder with a hand-built split chain; adapt-and-cut is the automated route the hierarchy was measured on](entries/2026-10-28-which-fault-mesh-construction-is-used-in-practice.md) · finding
-- 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement
 
 [All entries](entries.md)
