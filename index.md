@@ -14,10 +14,10 @@ page says what currently stands, and the weekly digest says what moved.
 
 **Topics**
 
-- [Fault multigrid](topics/fault-multigrid.md) · 32 live
+- [Fault multigrid](topics/fault-multigrid.md) · 33 live
 - [Particle-to-field projection](topics/particle-to-field-projection.md) · 5 live
 - [Shear-band length scales](topics/shear-band-length-scales.md) · 25 live
-- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 29 live
+- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 30 live
 - [Transport histories](topics/transport-histories.md) · 5 live
 - [Constitutive models](topics/viscoelastic-constitutive-models.md) · 8 live
 - [Viscoelastic stretch at large steps](topics/viscoelastic-stretch-at-large-steps.md) · 6 live
@@ -41,6 +41,7 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-11-03 · [The fault's division and the band's width are not knobs: the ladder is built from the fault's own points, and the band is as wide as the local mesh size (Louis, 2026-11-03, clarifying decision 1b)](entries/2026-11-03-the-faults-division-and-the-bands-width-are-not-knobs-the-ladder-is-built-from-the-faults-own-points-and-the-width-is-the-local-mesh-size.md) · decision
 - 2026-11-02 · [The campaign drivers default to uw_chain 0 (b440b88), accepted on kaiju at np 16 on development 25d62812: the last 'where enforced' line of the 2026-11-01 tail decision is done, and the drivers' decisions ledger is citable](entries/2026-11-02-the-drivers-default-to-uw-chain-0-the-last-where-enforced-line-of-the-tail-decision-is-done.md) · measurement
 - 2026-11-02 · [The add-on is the line to invest in for split faults: the fault carries its own resolution as a divided line, and split coarse levels are not developed further (Louis, 2026-11-02)](entries/2026-11-02-the-add-on-is-the-line-for-split-faults-the-fault-carries-its-own-resolution-and-split-coarse-levels-are-not-developed-further.md) · decision
 - 2026-11-02 · [seams='conform' cannot place a fault that reaches the domain wall in 2-D (the network mesher's cavity reaches the wall), and the ladder takes only gather: dividing the FAC patch across ranks is blocked for every surface-reaching fault until one of the two changes](entries/2026-11-02-conform-seams-cannot-place-a-wall-reaching-fault-in-2d-so-the-patch-cannot-be-divided-across-ranks-in-the-trench-models.md) · dead-end
@@ -60,6 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-29 · [A datum-only cold start on the rotated path sets its convergence reference from the lifted iterate and takes one increment more than it needs](entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md) · finding
 - 2026-10-28 · [Which fault-mesh construction is used in practice: the placed ladder with a hand-built split chain; adapt-and-cut is the automated route the hierarchy was measured on](entries/2026-10-28-which-fault-mesh-construction-is-used-in-practice.md) · finding
 - 2026-10-28 · [The fault-split integration head reproduces UWTN 2026-022's numbers; the suites pass but for two failures that predate it](entries/2026-10-28-fault-split-integration-head-reproduces-uwtn-2026-022.md) · measurement
-- 2026-10-28 · [Coarse solve on the rotated path: handle the null space, leave the coarse level to PETSc's defaults; MUMPS is not the default](entries/2026-10-28-coarse-solve-null-space-first-petsc-defaults-not-mumps.md) · decision
 
 [All entries](entries.md)

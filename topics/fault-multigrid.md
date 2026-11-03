@@ -23,8 +23,11 @@ on `development` since #889 and #890 merged on 2026-10-31, and `Mesh.multigrid_l
   split level into which the fault is placed, and the FAC patch on that level by LU, is
   what is developed. The fault carries its own resolution: it comes as a divided line
   (or a triangulated surface) and its points are the ladder's rungs; no parameter $S$
-  sets the along-strike resolution, and the drivers' `uw_spacing` and band width $2S$
-  are to go. Refinement around the fault is a separate question from the fault's own
+  sets the along-strike resolution, and the band is as wide as the local mesh size, an
+  average of it where the mesh is not uniform (Louis, 2026-11-03, clarifying 1b:
+  neither is a knob a model turns; whether the division is sufficient is observed, not
+  set; entry 2026-11-03). The drivers' `uw_spacing` (one base cell since 2026-11-02)
+  and band width $2S$ are to go; every measurement so far used a $2S$ band. Refinement around the fault is a separate question from the fault's own
   nodes. Split coarse levels (the chain) are not developed further and stay in the
   library as they are, for comparison. Evidence: the add-on at 66 to 125 velocity
   iterations against the chain's 166 to 725 on five 2-D fixtures once the patch's
@@ -378,6 +381,7 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 ## Entries
 
+- 2026-11-03 · [The fault's division and the band's width are not knobs: the ladder is built from the fault's own points, and the band is as wide as the local mesh size (Louis, 2026-11-03, clarifying decision 1b)](../entries/2026-11-03-the-faults-division-and-the-bands-width-are-not-knobs-the-ladder-is-built-from-the-faults-own-points-and-the-width-is-the-local-mesh-size.md) · decision
 - 2026-11-02 · [The campaign drivers default to uw_chain 0 (b440b88), accepted on kaiju at np 16 on development 25d62812: the last 'where enforced' line of the 2026-11-01 tail decision is done, and the drivers' decisions ledger is citable](../entries/2026-11-02-the-drivers-default-to-uw-chain-0-the-last-where-enforced-line-of-the-tail-decision-is-done.md) · measurement
 - 2026-11-02 · [The add-on is the line to invest in for split faults: the fault carries its own resolution as a divided line, and split coarse levels are not developed further (Louis, 2026-11-02)](../entries/2026-11-02-the-add-on-is-the-line-for-split-faults-the-fault-carries-its-own-resolution-and-split-coarse-levels-are-not-developed-further.md) · decision
 - 2026-11-02 · [seams='conform' cannot place a fault that reaches the domain wall in 2-D (the network mesher's cavity reaches the wall), and the ladder takes only gather: dividing the FAC patch across ranks is blocked for every surface-reaching fault until one of the two changes](../entries/2026-11-02-conform-seams-cannot-place-a-wall-reaching-fault-in-2d-so-the-patch-cannot-be-divided-across-ranks-in-the-trench-models.md) · dead-end
