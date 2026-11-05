@@ -47,11 +47,11 @@ What the run showed:
 - **None of them ran the geometric rule.** Every example builds its mesh without a
   refinement hierarchy, so the velocity block fell back to GAMG and the line replaced only
   GAMG's own coarse solve. The rule itself is tested by A-prime's suite.
-- **Where the solve ran, the line changed nothing.** Fourteen examples completed in both
-  arms with the same velocity and pressure to 1e-9 or better and the same iteration
-  counts: the free-slip annulus kernels, the annulus benchmark of Kramer et al., the
-  free-slip spherical shell, the ellipse, tutorial 6 and nine submesh investigation
-  scripts. No run met a zero pivot or `DIVERGED_PC_FAILED`.
+- **Where the solve ran, the line changed nothing.** Fourteen examples solved in both arms
+  with the same velocity and pressure to 1e-9 or better and the same iteration counts:
+  the free-slip annulus kernels, the annulus benchmark of Kramer et al., the free-slip
+  spherical shell, the ellipse, tutorial 6 and nine submesh investigation scripts. The
+  first two then fail in their own post-processing, after the solve. No run met a zero pivot or `DIVERGED_PC_FAILED`.
 - **Fourteen fail in both arms, for reasons that have nothing to do with the line.**
   Twelve user-facing ones stop on a removed `evalf` API, the three-index array shapes,
   pint units, `estimate_dt`, or do not parse. Tutorial 8 runs but its velocity solve hits
