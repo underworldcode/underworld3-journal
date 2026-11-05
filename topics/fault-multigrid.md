@@ -386,6 +386,7 @@ Position (2026-10-14): keep the band lean by realisation; never touch the base; 
 
 ## Entries
 
+- 2026-11-05 · [The multigrid coarse solve has one rule on every route: redundant LU with a nonzero factor shift, the null space fixed on the fine level, and no SVD path (Louis, 2026-11-05)](../entries/2026-11-05-the-coarse-solve-has-one-rule-on-every-route-redundant-lu-with-a-zero-pivot-shift-and-no-svd-path.md) · decision
 - 2026-11-03 · [The ladder is equant: its half-width is one cell and its rungs are about one cell apart, so recipe v2 stands, and the fault-division design goes to a plate-boundaries module (Louis, 2026-11-03)](../entries/2026-11-03-the-ladder-is-equant-half-width-one-cell-and-rungs-at-about-one-cell-recipe-v2-stands-and-the-division-design-goes-to-a-plate-boundaries-module.md) · decision
 - 2026-11-02 · [The campaign drivers default to uw_chain 0 (b440b88), accepted on kaiju at np 16 on development 25d62812: the last 'where enforced' line of the 2026-11-01 tail decision is done, and the drivers' decisions ledger is citable](../entries/2026-11-02-the-drivers-default-to-uw-chain-0-the-last-where-enforced-line-of-the-tail-decision-is-done.md) · measurement
 - 2026-11-02 · [The add-on is the line to invest in for split faults: the fault carries its own resolution as a divided line, and split coarse levels are not developed further (Louis, 2026-11-02)](../entries/2026-11-02-the-add-on-is-the-line-for-split-faults-the-fault-carries-its-own-resolution-and-split-coarse-levels-are-not-developed-further.md) · decision

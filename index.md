@@ -14,10 +14,10 @@ page says what currently stands, and the weekly digest says what moved.
 
 **Topics**
 
-- [Fault multigrid](topics/fault-multigrid.md) · 33 live
+- [Fault multigrid](topics/fault-multigrid.md) · 34 live
 - [Particle-to-field projection](topics/particle-to-field-projection.md) · 5 live
 - [Shear-band length scales](topics/shear-band-length-scales.md) · 25 live
-- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 30 live
+- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 31 live
 - [Transport histories](topics/transport-histories.md) · 5 live
 - [Constitutive models](topics/viscoelastic-constitutive-models.md) · 8 live
 - [Viscoelastic stretch at large steps](topics/viscoelastic-stretch-at-large-steps.md) · 6 live
@@ -41,6 +41,7 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-11-05 · [The multigrid coarse solve has one rule on every route: redundant LU with a nonzero factor shift, the null space fixed on the fine level, and no SVD path (Louis, 2026-11-05)](entries/2026-11-05-the-coarse-solve-has-one-rule-on-every-route-redundant-lu-with-a-zero-pivot-shift-and-no-svd-path.md) · decision
 - 2026-11-03 · [The ladder is equant: its half-width is one cell and its rungs are about one cell apart, so recipe v2 stands, and the fault-division design goes to a plate-boundaries module (Louis, 2026-11-03)](entries/2026-11-03-the-ladder-is-equant-half-width-one-cell-and-rungs-at-about-one-cell-recipe-v2-stands-and-the-division-design-goes-to-a-plate-boundaries-module.md) · decision
 - 2026-11-03 · [The fault's division and the band's width are not knobs: the ladder is built from the fault's own points, and the band is as wide as the local mesh size (Louis, 2026-11-03, clarifying decision 1b)](entries/2026-11-03-the-faults-division-and-the-bands-width-are-not-knobs-the-ladder-is-built-from-the-faults-own-points-and-the-width-is-the-local-mesh-size.md) · decision
 - 2026-11-02 · [The campaign drivers default to uw_chain 0 (b440b88), accepted on kaiju at np 16 on development 25d62812: the last 'where enforced' line of the 2026-11-01 tail decision is done, and the drivers' decisions ledger is citable](entries/2026-11-02-the-drivers-default-to-uw-chain-0-the-last-where-enforced-line-of-the-tail-decision-is-done.md) · measurement
@@ -60,6 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-29 · [A per-level wall rotation cuts a rotated free-slip custom-FMG solve on an adapted annulus from 18 serial and 197 parallel velocity iterations to 3 and 4](entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md) · measurement
 - 2026-10-29 · [Under continuation a datum-only cold start skips its Picard phase and still converges in 10 Newton iterations: not a must-fix](entries/2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md) · measurement
 - 2026-10-29 · [A datum-only cold start on the rotated path sets its convergence reference from the lifted iterate and takes one increment more than it needs](entries/2026-10-29-datum-only-cold-start-reference-on-the-rotated-path-costs-one-increment.md) · finding
-- 2026-10-28 · [Which fault-mesh construction is used in practice: the placed ladder with a hand-built split chain; adapt-and-cut is the automated route the hierarchy was measured on](entries/2026-10-28-which-fault-mesh-construction-is-used-in-practice.md) · finding
 
 [All entries](entries.md)
