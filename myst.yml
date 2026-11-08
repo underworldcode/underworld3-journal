@@ -49,6 +49,7 @@ project:
         - file: entries.md
         - title: "2026-11"
           children:
+            - file: entries/2026-11-08-measure-the-two-level-fac-patch-against-one-block-in-parallel-before-3d.md
             - file: entries/2026-11-05-the-coarse-solve-has-one-rule-on-every-route-redundant-lu-with-a-zero-pivot-shift-and-no-svd-path.md
             - file: entries/2026-11-05-no-example-needs-an-svd-coarse-solve-44-files-measured-on-hyperion-the-one-rule-is-in-code-and-docs.md
             - file: entries/2026-11-03-the-ladder-is-equant-half-width-one-cell-and-rungs-at-about-one-cell-recipe-v2-stands-and-the-division-design-goes-to-a-plate-boundaries-module.md

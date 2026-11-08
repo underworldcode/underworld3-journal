@@ -14,10 +14,10 @@ page says what currently stands, and the weekly digest says what moved.
 
 **Topics**
 
-- [Fault multigrid](topics/fault-multigrid.md) · 34 live
+- [Fault multigrid](topics/fault-multigrid.md) · 35 live
 - [Particle-to-field projection](topics/particle-to-field-projection.md) · 5 live
 - [Shear-band length scales](topics/shear-band-length-scales.md) · 25 live
-- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 32 live
+- [Solvers and multigrid](topics/solvers-and-multigrid.md) · 33 live
 - [Transport histories](topics/transport-histories.md) · 5 live
 - [Constitutive models](topics/viscoelastic-constitutive-models.md) · 8 live
 - [Viscoelastic stretch at large steps](topics/viscoelastic-stretch-at-large-steps.md) · 6 live
@@ -41,6 +41,7 @@ page says what currently stands, and the weekly digest says what moved.
 
 ## Recent entries
 
+- 2026-11-08 · [Measure the two-level FAC patch against #934's one block in parallel, by wall time and memory, before any 3-D work: the serial iteration comparison that held it could not show its case (Louis, 2026-11-08)](entries/2026-11-08-measure-the-two-level-fac-patch-against-one-block-in-parallel-before-3d.md) · decision
 - 2026-11-05 · [The multigrid coarse solve has one rule on every route: redundant LU with a nonzero factor shift, the null space fixed on the fine level, and no SVD path (Louis, 2026-11-05)](entries/2026-11-05-the-coarse-solve-has-one-rule-on-every-route-redundant-lu-with-a-zero-pivot-shift-and-no-svd-path.md) · decision
 - 2026-11-05 · [No example needs an SVD coarse solve: 44 examples and tutorials lose the line, measured on hyperion where they run, and the one coarse-solve rule is in code and docs on A-prime (closes the 2026-11-05 decision)](entries/2026-11-05-no-example-needs-an-svd-coarse-solve-44-files-measured-on-hyperion-the-one-rule-is-in-code-and-docs.md) · measurement
 - 2026-11-03 · [The ladder is equant: its half-width is one cell and its rungs are about one cell apart, so recipe v2 stands, and the fault-division design goes to a plate-boundaries module (Louis, 2026-11-03)](entries/2026-11-03-the-ladder-is-equant-half-width-one-cell-and-rungs-at-about-one-cell-recipe-v2-stands-and-the-division-design-goes-to-a-plate-boundaries-module.md) · decision
@@ -60,6 +61,5 @@ page says what currently stands, and the weekly digest says what moved.
 - 2026-10-30 · [Ladder levels nest along the spine, not by vertices, when the band widens with the level as production does](entries/2026-10-30-ladder-levels-nest-along-the-spine-not-by-vertices-when-the-band-widens.md) · finding
 - 2026-10-29 · [Which multigrid tail goes under the finest ladder: the lean split chain in production; a single ladder over the welded base only on a linear rig up to a band ratio of about 12](entries/2026-10-29-which-tail-under-the-finest-ladder-the-lean-split-chain-in-production.md) · decision
 - 2026-10-29 · [A per-level wall rotation cuts a rotated free-slip custom-FMG solve on an adapted annulus from 18 serial and 197 parallel velocity iterations to 3 and 4](entries/2026-10-29-per-level-wall-rotation-cuts-rotated-freeslip-fmg-iterations-on-an-adapted-annulus.md) · measurement
-- 2026-10-29 · [Under continuation a datum-only cold start skips its Picard phase and still converges in 10 Newton iterations: not a must-fix](entries/2026-10-29-datum-only-continuation-skips-picard-and-still-converges.md) · measurement
 
 [All entries](entries.md)
