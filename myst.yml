@@ -179,7 +179,9 @@ project:
   # END GENERATED TOC
 
 site:
-  template: book-theme
+  # Pinned with mystmd (1.6.7 in .github/workflows/deploy.yml): an unpinned theme breaks
+  # the build when a release outruns mystmd (the notes site, 2026-11-11). Upgrade both together.
+  template: https://github.com/jupyter-book/myst-theme/releases/download/myst-to-react%401.4.1/book-theme.zip
   title: Underworld journal
   options:
     folders: true
